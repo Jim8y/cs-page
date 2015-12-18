@@ -26,14 +26,18 @@ access key.
 There are multiple ways to configure credential file for Boto's usage. For
 instance, put the credential file downloaded from IAM at `~/.aws/credentials`,
 
-    [default]
-    aws_access_key_id = YOUR_ACCESS_KEY
-    aws_secret_access_key = YOUR_SECRET_KEY
+```shell
+[default]
+aws_access_key_id = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_KEY
+```
 
 Not sure if it's mandatory but Boto document suggest doing so
 
-    [default]
-    region=us-east-1
+```shell
+[default]
+region=us-east-1
+```
 
 # Install Boto
 

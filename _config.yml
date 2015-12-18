@@ -15,4 +15,5 @@ github_username:  bl4ck5un
 
 exclude: [compass, semantic, semantic.json, node_modules]
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+highlighter: rouge
