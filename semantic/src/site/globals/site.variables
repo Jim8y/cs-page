@@ -8,3 +8,4 @@
 @pageFont          : @fontName, "Palatino Linotype", "Book Antiqua", Palatino, serif;
 
 @importGoogleFonts : false;
+@fontSize : 18px;

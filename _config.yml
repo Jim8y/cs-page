@@ -17,3 +17,5 @@ exclude: [compass, semantic, semantic.json, node_modules]
 # Build settings
 markdown: redcarpet
 highlighter: rouge
+
+gem: [compass]

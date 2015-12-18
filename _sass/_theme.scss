@@ -1,3 +1,18 @@
+@mixin border-radius ( $value: 3px ) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+  // keeps background from busting out of border
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
 body {
   color: #515151;
   background-color: #ddd;
@@ -12,9 +27,10 @@ footer {
   text-shadow: 0px 1px 0px #fff;
 }
 
-.content {
-  // @include box-shadow(#bbb 0px 0px 20px);
+.canvas {
+  @include box-shadow(#bbb 0px 0px 20px);
   background-color: #fff;
+  @include border-radius(3px);
 }
 
 a {
@@ -32,8 +48,4 @@ strong {
 
 em {
   font-style: italic;
-}
-
-.content {
-  // @include border-radius(3px);
 }
