@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<p>
+<div class="meta">
   <span><i class="calendar icon"></i></span>
   <time>{{ page.date | date: "%b %-d, %Y" }}</time>
   • By
@@ -12,10 +12,11 @@ layout: default
 
   {% if page.tags %} •
     {% for tag in page.tags %}
-      <span class="ui small label"><i class="tags icon"></i>{{ tag }}</span>
+      <span class="ui mini label"><i class="tags icon"></i>{{ tag }}</span>
     {% endfor %}
   {% endif %}
-</p>
+</div>
+
 <h1 class="ui dividing header">{{ page.title }}</h1>
 
 {{ content }}

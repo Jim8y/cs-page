@@ -4,7 +4,7 @@ tags : ["aws", "Python"]
 title : "Use Amazon Machine Learning in Python"
 ---
 
-## AWS Credentials
+# AWS Credentials
 
 Appropriate credentials are required to access aws service API. Amazon Web Service
 differentiates two types of credentials: root credentials and IAM credentials.
@@ -35,13 +35,13 @@ Not sure if it's mandatory but Boto document suggest doing so
     [default]
     region=us-east-1
 
-## install Boto
+# Install Boto
 
     pip install boto3
 
 If for current user only, append `--user`.
 
-## Using Boto3
+# Using Boto3
 
 To verify your credentials and other configurations are correct, run a minimal
 boto3 script this like,
@@ -53,7 +53,7 @@ boto3 script this like,
         print(bucket.name)
 
 
-## Amazon Machine Learning API
+# Amazon Machine Learning API
 
     import boto3
 
