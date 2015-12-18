@@ -1,0 +1,10 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@fontName: 'alegreyaregular';
+
+@headerFont        : @fontName, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+@pageFont          : @fontName, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+@importGoogleFonts : false;

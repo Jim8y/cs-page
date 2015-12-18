@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div>
+  <h1 class="ui header">Posts</h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+
+        <h2 class="ui header">
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <div class="sub header">{{ post.date | date: "%b %-d, %Y" }}</div>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,9 +1,0 @@
-!dist
-src
-*.json
-*.txt
-*.md
-*.js
-*.css
-!*.min.js
-!*.min.css

@@ -1,0 +1,47 @@
+// @import "base";
+
+.sidebar {
+  text-align: center;
+  padding: 0rem;
+  margin: 0;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+// title
+#site-title {
+  margin: .5rem;
+  font-size: 3.6rem;
+}
+
+#site-subtitle {
+  margin: 0;
+}
+
+// navigator bar
+
+
+#sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+    margin: 0.5rem;
+    padding: 0 0;
+    li {
+      display: inline;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    li::after {
+        content: ",";
+    }
+}
+
+footer {
+  font-size: .8rem;
+  div {
+    margin: .5rem auto;
+    text-align: center;
+  }
+}

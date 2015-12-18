@@ -1,0 +1,19 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+/* Thanks to https://css-tricks.com/snippets/css/using-font-face/
+  and */
+
+@font-face {
+    font-family: 'alegreyaregular';
+    src: url('/static/fonts/alegreya-regular-webfont.eot');
+    src: url('/static/fonts/alegreya-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/alegreya-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/alegreya-regular-webfont.woff') format('woff'),
+         url('/static/fonts/alegreya-regular-webfont.ttf') format('truetype'),
+         url('/static/fonts/alegreya-regular-webfont.svg#alegreyaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

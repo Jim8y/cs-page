@@ -178,7 +178,7 @@ h2, h1 {
   margin-bottom: .5rem;
 }
 
-/* line 3, ../compass/sass/_sidebar.scss */
+/* line 3, ../compass/sass/_top.scss */
 .sidebar {
   text-align: center;
   padding: 0rem;
@@ -187,25 +187,25 @@ h2, h1 {
   overflow: hidden;
 }
 
-/* line 12, ../compass/sass/_sidebar.scss */
+/* line 12, ../compass/sass/_top.scss */
 #site-title {
   margin: .5rem;
   font-size: 3.6rem;
 }
 
-/* line 17, ../compass/sass/_sidebar.scss */
+/* line 17, ../compass/sass/_top.scss */
 #site-subtitle {
   margin: 0;
 }
 
-/* line 24, ../compass/sass/_sidebar.scss */
+/* line 24, ../compass/sass/_top.scss */
 #sidebar-nav {
   padding-left: 0;
   list-style: none;
   margin: 0.5rem;
   padding: 0 0;
 }
-/* line 29, ../compass/sass/_sidebar.scss */
+/* line 29, ../compass/sass/_top.scss */
 #sidebar-nav li {
   display: inline;
   padding-left: 2px;
@@ -213,16 +213,16 @@ h2, h1 {
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 36, ../compass/sass/_sidebar.scss */
+/* line 36, ../compass/sass/_top.scss */
 #sidebar-nav li::after {
   content: ",";
 }
 
-/* line 41, ../compass/sass/_sidebar.scss */
+/* line 41, ../compass/sass/_top.scss */
 footer {
   font-size: .8rem;
 }
-/* line 43, ../compass/sass/_sidebar.scss */
+/* line 43, ../compass/sass/_top.scss */
 footer div {
   margin: .5rem auto;
   text-align: center;
@@ -327,7 +327,7 @@ abbr[title] {
 /* line 35, ../compass/sass/_layout.scss */
 blockquote {
   padding: .5rem 1rem;
-  margin: .8rem 0;
+  margin: .1rem .1rem;
   color: #7a7a7a;
   border-left: .25rem solid #e5e5e5;
 }
@@ -351,7 +351,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
 }
 
 /* line 3, ../compass/sass/_theme.scss */
