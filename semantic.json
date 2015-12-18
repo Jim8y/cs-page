@@ -23,7 +23,8 @@
       "grid",
       "container",
       "header",
-      "icon"
+      "icon",
+      "label"
   ],
   "version": "2.1.6"
 }
