@@ -1,0 +1,25 @@
+---
+layout: default
+title: Tags
+---
+{% capture tags %}
+    {% for tag in site.tags %}
+        {{ tag[0] | replace:' ','&#32;' }}
+    {% endfor %}
+{% endcapture %}
+
+{% assign sorted_tags = tags | split:' ' | sort %}
+
+{% assign tags_list = sorted_tags %}
+<h3 class="ui horizontal divider header"><i class="tag icon"></i>Tags</h3>
+{% include JB/tags_list %}
+
+<h3 class="ui horizontal divider header">Articles</h3>
+{% for tag in sorted_tags %}
+    {% assign actual_tag_name = tag | replace:'&#32;',' ' %}
+    <div class="ui small header" id="{{ actual_tag_name | replace:' ','-' | replace:'#','sharp' }}">
+      <div class="content"> {{ actual_tag_name }}</div>
+    </div>
+    {% assign pages_list = site.tags[actual_tag_name] %}
+    {% include JB/pages_list %}
+{% endfor %}

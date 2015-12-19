@@ -18,4 +18,11 @@ exclude: [compass, semantic, semantic.json, node_modules]
 markdown: redcarpet
 highlighter: rouge
 
-gem: [compass]
+redcarpet:
+  extensions:
+    - fenced_code_blocks
+    - autolink
+    - no_intra_emphasis
+    - with_toc_data
+    - tables
+gem: [compass, redcarpet]

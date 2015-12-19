@@ -26,6 +26,7 @@ access key.
 There are multiple ways to configure credential file for Boto's usage. For
 instance, put the credential file downloaded from IAM at `~/.aws/credentials`,
 
+
 ```shell
 [default]
 aws_access_key_id = YOUR_ACCESS_KEY

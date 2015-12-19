@@ -24,7 +24,10 @@
       "container",
       "header",
       "icon",
-      "label"
+      "label",
+      "list",
+      "divider",
+      "item"
   ],
   "version": "2.1.6"
 }
