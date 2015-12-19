@@ -1,6 +1,6 @@
 /* Lists */
 ul, ol, dl {
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -12,15 +12,6 @@ dd {
 }
 
 /* Misc */
-hr {
-  position: relative;
-  margin: 0;
-  margin-top: .1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid #666;
-}
-
 abbr {
   font-size: 85%;
   font-weight: bold;
@@ -35,7 +26,7 @@ abbr[title] {
 /* Quotes */
 blockquote {
   padding: .5rem 1rem;
-  margin: .1rem .1rem;
+  margin: 1em auto;
   color: #7a7a7a;
   border-left: .25rem solid #e5e5e5;
 }
@@ -52,7 +43,7 @@ img {
 }
 
 .canvas {
-  max-width: 45rem;
+  max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;

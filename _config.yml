@@ -16,6 +16,7 @@ github_username:  bl4ck5un
 exclude: [compass, semantic, semantic.json, node_modules]
 # Build settings
 markdown: redcarpet
+excerpt_separator: "\n\n"
 highlighter: rouge
 
 redcarpet:

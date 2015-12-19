@@ -1,9 +1,10 @@
+@import "colors";
+
 @mixin border-radius ( $value: 3px ) {
   -webkit-border-radius: $value;
   -moz-border-radius: $value;
   border-radius: $value;
 
-  // keeps background from busting out of border
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -15,32 +16,32 @@
 }
 
 body {
-  color: #515151;
-  background-color: #ddd;
+  color: $color6;
+  background-color: $color3;
 }
 
 #site-title, h1, h2, h3, h4, h5, h6 {
-  color: #505050;
+  color: $color5;
 }
 
 footer {
-  color: #bbb;
+  color: $color4;
   text-shadow: 0px 1px 0px #fff;
 }
 
 .canvas {
-  @include box-shadow(#bbb 0px 0px 20px);
-  background-color: #fff;
+  @include box-shadow($color4 0px 0px 20px);
+  background-color: $color1;
   @include border-radius(3px);
 }
 
 a {
-  color: #888;
+  color: $color5;
   transition: color 0.2s ease;
   text-decoration: none;
 }
 a:hover {
-  color: #515151;
+  color: $color6;
 }
 
 strong {

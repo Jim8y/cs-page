@@ -2,18 +2,15 @@
 layout: default
 ---
 
-<h1 class="ui large header">
+<span></span>
+<h1 class="ui header article-header">
   {{ page.title }}
-  <div class="sub header meta">
-    <div class="ui horizontal bulleted list">
-      <span class="item"><i class="calendar icon"></i><time>{{ page.date | date: "%b %-d, %Y" }}</time></span>
-      <span class="item">By {% if page.author %} {{ page.author }} {% else %} Fan Zhang {% endif %} </span>
-      <span class="item">
-        {% if page.tags %}<i class="tags icon"></i>
-            {% for tag in page.tags %}<span><a href="/tags.html#{{ tag }}">{{ tag }}</a>,</span>{% endfor %}
-        {% endif %}
-      </span>
-    </div>
+  <div class="sub header">
+      <span><i class="calendar icon"></i><time>{{ page.date | date: "%b %-d, %Y" }}</time></span>
+      &bull;
+      <span>By {% if page.author %} {{ page.author }} {% else %} Fan Zhang {% endif %} </span>
+      &bull;
+      <span><i class="tags icon"></i>{% for tag in page.tags %}<span><a href="/tags.html#{{ tag }}">{{ tag }}</a>,</span>{% endfor %}</span>
   </div>
 </h1>
 

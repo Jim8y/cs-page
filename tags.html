@@ -12,7 +12,10 @@ title: Tags
 
 {% assign tags_list = sorted_tags %}
 <h3 class="ui horizontal divider header"><i class="tag icon"></i>Tags</h3>
+
+<div class="ui labels meta">
 {% include JB/tags_list %}
+</div>
 
 <h3 class="ui horizontal divider header">Articles</h3>
 {% for tag in sorted_tags %}

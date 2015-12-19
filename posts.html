@@ -1,19 +1,27 @@
 ---
 layout: default
 ---
-<a href="/tag">Tags</a>
 
-<div>
-  <h1 class="ui header">Posts</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
+{% for post in site.posts %}
+  {% assign currentdate = post.date | date: "%Y" %}
+  {% if currentdate != date %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h1 class="ui horizontal divider header">{{ currentdate }}</h1>
+    <ul>
+    {% assign date = currentdate %}
+  {% endif %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="date">{{ post.date | date: "%b-%d"}}</span>
+    </li>
+  {% if forloop.last %}</ul>{% endif %}
+{% endfor %}
 
-        <h2 class="ui header">
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          <div class="sub header">{{ post.date | date: "%b %-d, %Y" }}</div>
-        </h2>
-      </li>
+{% capture tags %}
+    {% for tag in site.tags %}
+        {{ tag[0] | replace:' ','&#32;' }}
     {% endfor %}
-  </ul>
-</div>
+{% endcapture %}
+
+{% assign sorted_tags = tags | split:' ' | sort %}
+{% assign tags_list = sorted_tags %}

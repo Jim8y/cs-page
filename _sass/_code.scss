@@ -5,8 +5,10 @@ pre {
 }
 code {
   padding: .25em .25em;
-  font-size: 85%;
+  margin: 0;
+  font-size: 80%;
   border-radius: 3px;
+  background: #eee;
 }
 pre {
   display: block;
@@ -20,7 +22,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   overflow-y: hidden;
-  // overflow-x: hidden;
+  overflow-x: auto;
 }
 pre code {
   padding: 0;
@@ -28,6 +30,7 @@ pre code {
   color: inherit;
   word-wrap: normal;
   white-space: pre;
+  background: none;
 }
 .highlight {
   margin-bottom: 1rem;

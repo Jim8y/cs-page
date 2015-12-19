@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: ["Python", "dev"]
-title: "Automatically generate requirements file for Python project"
+tags: [Python, Development]
+title: Extract requirement files from Python projects
 ---
 
 When you need to move your Python project around, say, to test under the

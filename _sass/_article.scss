@@ -10,6 +10,23 @@
     font-style: normal;
 }
 
-.meta {
-  font-family: 'alegreya_sansregular', sans-serif;
+hr {
+  position: relative;
+  margin: 0;
+  margin-top: -.2rem;
+  margin-bottom: 1.2rem;
+  border: 0;
+  border-top: 1px solid #666;
+}
+
+div#toc {
+  border: 3px solid #ccc;
+  width: 20rem;
+  margin: 1rem 0 1rem 0;
+}
+
+li span.date {
+  font: inherit;
+  float: right;
+  width: 5rem;
 }

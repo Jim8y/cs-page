@@ -1,7 +1,7 @@
 ---
 layout: post
-title : "Quotation concept in Unix Shell"
-tages : ["Shell"]
+title : Quotation concept in Unix Shell
+tags : [Development, Shell]
 ---
 
 Tell me how to quote.

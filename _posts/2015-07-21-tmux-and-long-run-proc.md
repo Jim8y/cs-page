@@ -1,6 +1,7 @@
 ---
-Tags : ["Development", "Systems"]
-title : "tmux and long run process"
+layout: post
+tags : ["Development", "Systems"]
+title : tmux and long run processes
 ---
 
 This blog stems from a very simple question: why my tasks on remote server get killed
