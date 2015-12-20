@@ -1,4 +1,8 @@
-# Notes on Install fcitx on Arch Linux
+---
+layout: post
+title: Notes on Install fcitx on Arch Linux
+tags : [ArchLinux, Tools]
+---
 
 Fcitx is the official Chinese input method engine (IME) suggested by ArchWiki. Fcitx per se is awesome but every time I (re)install Arch Linux on my boxes, I had trouble getting fcitx works out of the box -- `pacman -Syu fcitx-im` doesn't give you a working IME. I guess the major facet making the installation and configuration so tricky is that fcitx doesn't provide an all-in-one confguration tool (though I guess for good reason), so as an user you have to manually put configuration snippets in several different places. Before you get all of them right, it won't work, which makes this process even trickier and frastrating. So, this is a short note about how to install and fcitx on Arch Linux in my case.
 

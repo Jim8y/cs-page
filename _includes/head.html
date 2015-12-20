@@ -3,6 +3,10 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+  {% if page.url == "/404.html" %}
+    <meta http-equiv="refresh" content="5; url=/">
+  {% endif %}
+
   <link rel="stylesheet" href="/static/semantic/semantic.css">
   <link rel="stylesheet" href="/static/screen.css">
   <link rel="stylesheet" href="/static/gruvbox.css">
