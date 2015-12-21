@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generate Callgraph for C/C++ programs
+title: Generating Callgraphs from C/C++ Source Files 
 tags: [Programming Languages, Tools]
 ---
 
