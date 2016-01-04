@@ -2,6 +2,9 @@
 layout: default
 title: Tags
 ---
+<span></span>
+<h1 class="ui center aligned header">{{ page.title | upcase }}</h1>
+
 {% capture tags %}
     {% for tag in site.tags %}
         {{ tag[0] | replace:' ','&#32;' }}
