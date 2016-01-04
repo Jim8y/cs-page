@@ -8,11 +8,11 @@ layout: default
 <h1 class="ui center aligned header article-header">{{ page.title | upcase }}</h1>
 
 <h4 class="ui horizontal divider header">
-    <span><i class="calendar icon"></i><time>{{ page.date | date: "%b %-d, %Y" }}</time></span>
-    &bull;
-    <span>By {% if page.author %} {{ page.author }} {% else %} Fan Zhang {% endif %} </span>
-    &bull;
-    <span><i class="tags icon"></i>{% for tag in page.tags %}<span><a href="/tags.html#{{ tag }}">{{ tag }}</a>,</span>{% endfor %}</span>
+  <div class="ui stackable celled horizontal list">
+  <div class="item"><span><i class="calendar icon"></i><time>{{ page.date | date: "%b %-d, %Y" }}</time></span></div>
+  <div class="item">By {% if page.author %} {{ page.author }} {% else %} Fan Zhang {% endif %}</div>
+  <div class="item"><i class="tags icon"></i>{% for tag in page.tags %}<span><a href="/tags.html#{{ tag }}">{{ tag }}</a>,</span>{% endfor %}</div>
+</div>
 </h4>
 
 <div class="table-of-contents"></div>

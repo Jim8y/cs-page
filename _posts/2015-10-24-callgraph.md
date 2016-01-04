@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Generating Callgraphs from C/C++ Source Files 
+title: Generating Callgraphs from C/C++ Source Files
 tags: [Programming Languages, Tools]
 ---
 
 When studying the TCB size of modern cryptography implementations (e.g. HELib
-and NTL), we needed a tool to count lines of code that are involve in executing
-a program. It is actually not easy to accomplish so thought it sounds like
+and NTL for Homomorphic Encryption), I needed a tool to count lines of code that
+are involved in a single run of a program.
+It is actually not easy to accomplish thought it sounds like
 a piece of cake.
 I started with the idea of generating a function call graph and count LoC
 function by function.

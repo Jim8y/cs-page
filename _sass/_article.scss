@@ -19,23 +19,33 @@ hr {
   border-top: 1px solid #666;
 }
 
-// div#toc {
-//   border: 2px solid #ccc;
-//   width: 20rem;
-//   margin: 1rem 0 1rem 0;
-// }
-
 .table-of-contents {
   float: right;
   width: 40%;
   background: $color2;
-  font-size: 0.8em;
+  // font-size: 0.8em;
   padding: 1em 1em;
   margin: 0 0 0.5em 0.5em;
+}
+
+.table-of-contents ul {
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .table-of-contents {
+    display: none;
+  }
 }
 
 li span.date {
   font: inherit;
   float: right;
   width: 5rem;
+}
+
+@media (max-width: 500px) {
+  li span.date {
+    display: none;
+  }
 }

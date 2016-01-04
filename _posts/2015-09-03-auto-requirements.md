@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [Python, Development]
-title: Generating requirements.txt automatically
+title: Extracting requirements.txt from Python projects
 ---
 
 [`pipreqs`](https://github.com/bndr/pipreqs) is a useful tool to generate

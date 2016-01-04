@@ -1,12 +1,16 @@
 ---
 layout: default
+title: Blogs
 ---
+
+<span></span>
+<h1 class="ui center aligned header">{{ page.title | upcase }}</h1>
 
 {% for post in site.posts %}
   {% assign currentdate = post.date | date: "%Y" %}
   {% if currentdate != date %}
     {% unless forloop.first %}</ul>{% endunless %}
-    <h1 class="ui horizontal divider header">{{ currentdate }}</h1>
+    <h3 class="ui horizontal divider header"><i class="archive icon"></i>{{ currentdate }}</h3>
     <ul>
     {% assign date = currentdate %}
   {% endif %}
@@ -26,7 +30,7 @@ layout: default
 {% assign sorted_tags = tags | split:' ' | sort %}
 {% assign tags_list = sorted_tags %}
 
-<h2 class="ui horizontal divider header"><i class="tag icon"></i>Tags</h2>
+<h3 class="ui horizontal divider header"><i class="tag icon"></i>Tags</h3>
 
 <div class="ui large labels">
 {% include JB/tags_list %}
