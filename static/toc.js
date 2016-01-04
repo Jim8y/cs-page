@@ -7,7 +7,7 @@
         minimumHeaders: 3,
         headers: 'h1, h2, h3',
         container: 'div.canvas',
-        listType: 'ol', // values: [ol|ul]
+        listType: 'ul', // values: [ol|ul]
         showEffect: 'show', // values: [show|slideDown|fadeIn|none]
         showSpeed: 'slow' // set to 0 to deactivate effect
       },
@@ -67,8 +67,8 @@
     var return_to_top = '<i class="arrow up icon .back-to-top"></i>';
 
     var level = get_level(headers[0]),
-      this_level,
-      html = settings.title + " <" + settings.listType + ">";
+      this_level;
+    var html = "<h3>On this page:</h3>" + settings.title + " <" + settings.listType + ">";
 
     headers.on('click', function() {
         if (!settings.noBackToTopLinks) {
