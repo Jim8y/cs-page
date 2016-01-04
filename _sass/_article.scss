@@ -13,7 +13,7 @@
 hr {
   position: relative;
   margin: 0;
-  margin-top: -.2rem;
+  margin-top: -.5rem;
   margin-bottom: 1.2rem;
   border: 0;
   border-top: 1px solid #666;
@@ -29,4 +29,13 @@ li span.date {
   font: inherit;
   float: right;
   width: 5rem;
+}
+
+.article-header {
+  font-size: 3rem !important;
+}
+
+.article-sub-header {
+  font-size: 1.3rem !important;
+  font-weight: bold !important;
 }
