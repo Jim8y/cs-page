@@ -1,3 +1,5 @@
+
+
 hr {
   position: relative;
   margin: 0;
@@ -10,14 +12,20 @@ hr {
 .table-of-contents {
   float: right;
   width: 40%;
-  background: $color2;
-  // font-size: 0.8em;
-  padding: 1em 1em;
-  margin: 0 0 0.5em 0.5em;
+  // background: $grey;
+  padding: .5em .5em;
+  margin: 0.5em 0 0.5em 0.5em;
+  border: $color4 2px solid;
+}
+
+.table-of-contents h3 {
+  margin-bottom: 0;
 }
 
 .table-of-contents ul {
   margin: 0;
+  padding-left: 2em;
+  list-style-type: disc;
 }
 
 @media (max-width: 500px) {
@@ -29,11 +37,19 @@ hr {
 li span.date {
   font: inherit;
   float: right;
-  width: 5rem;
+  // width: 5rem;
 }
 
 @media (max-width: 500px) {
   li span.date {
     display: none;
   }
+}
+
+strong {
+  font-weight: 500;
+}
+
+em {
+  font-style: italic;
 }

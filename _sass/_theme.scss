@@ -9,6 +9,7 @@
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
+
 @mixin box-shadow($shadows...) {
   -moz-box-shadow: $shadows;
   -webkit-box-shadow: $shadows;
@@ -16,7 +17,7 @@
 }
 
 body {
-  color: $color6;
+  color: $black;
   background-color: $color3;
 }
 
@@ -41,13 +42,5 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: $color6;
-}
-
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
+  color: $black;
 }

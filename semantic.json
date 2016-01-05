@@ -27,7 +27,9 @@
       "label",
       "list",
       "divider",
-      "item"
+      "item",
+      "menu",
+      "segment"
   ],
   "version": "2.1.6"
 }

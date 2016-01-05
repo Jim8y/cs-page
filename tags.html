@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Tags
+title: Blogs by Tag
 ---
 <span></span>
-<h1 class="ui center aligned header">{{ page.title | upcase }}</h1>
+<h1 class="ui center aligned header">{{ page.title }}</h1>
 
 {% capture tags %}
     {% for tag in site.tags %}
@@ -27,5 +27,5 @@ title: Tags
       <div class="content"> {{ actual_tag_name }}</div>
     </div>
     {% assign pages_list = site.tags[actual_tag_name] %}
-    {% include JB/pages_list %}
+    {% include JB/pages_list.html %}
 {% endfor %}

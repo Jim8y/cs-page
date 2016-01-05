@@ -2,10 +2,15 @@
      User Global Variables
 *******************************/
 
-@fontName: 'alegreya';
+@fontName: 'Vollkorn';
+// @fontName: 'alegreya';
+//
+@headerFont        : 'Vollkorn', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+// @pageFont          : @fontName, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+//
+// @importGoogleFonts : false;
 
-@headerFont        : 'alegreya-sc', "Palatino Linotype", "Book Antiqua", Palatino, serif;
-@pageFont          : @fontName, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+@headerFontWeight: 500;
 
-@importGoogleFonts : false;
+
 @fontSize : 16px;
