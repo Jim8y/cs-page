@@ -2,7 +2,7 @@ div.canvas .ui.horizontal.divider.mobile {
   display: none;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-device-width: 500px) {
   li span.date {
     display: none;
   }
