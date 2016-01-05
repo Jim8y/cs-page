@@ -1,8 +1,8 @@
 /* Lists */
-ul, ol, dl {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
+// ul, ol, dl {
+//   margin-top: 1rem;
+//   margin-bottom: 1rem;
+// }
 
 dt {
   font-weight: bold;
@@ -36,11 +36,10 @@ blockquote p:last-child {
   margin-bottom: 0;
 }
 
-img {
-  display: block;
-  margin: 1rem auto;
-  border: 1px solid #e5e5e5;
-  max-width: 90%;
+img.inline {
+  display: inline-block;
+  margin: 0 2px;
+  vertical-align: middle;
 }
 
 .canvas {
