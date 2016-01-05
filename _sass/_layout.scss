@@ -1,8 +1,7 @@
-/* Lists */
-// ul, ol, dl {
-//   margin-top: 1rem;
-//   margin-bottom: 1rem;
-// }
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
 
 dt {
   font-weight: bold;
