@@ -38,7 +38,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background: #FFFFFF;
-  font-family: 'alegreyaregular', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'alegreya', "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: 16px;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
@@ -54,7 +54,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'alegreyaregular', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'alegreya-sc', "Palatino Linotype", "Book Antiqua", Palatino, serif;
   line-height: 1.2857em;
   margin: calc(2rem -  0.14285em ) 0em 1rem;
   font-weight: bold;
@@ -182,9 +182,17 @@ input::selection {
   and */
 
 @font-face {
-  font-family: 'alegreyaregular';
+  font-family: 'alegreya';
   src: url("/static/fonts/alegreya-regular-webfont.eot");
   src: url("/static/fonts/alegreya-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/static/fonts/alegreya-regular-webfont.woff2") format('woff2'), url("/static/fonts/alegreya-regular-webfont.woff") format('woff'), url("/static/fonts/alegreya-regular-webfont.ttf") format('truetype'), url("/static/fonts/alegreya-regular-webfont.svg#alegreyaregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'alegreya sans';
+  src: url("/static/fonts/alegreyasans-regular-webfont.eot");
+  src: url("/static/fonts/alegreyasans-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/static/fonts/alegreyasans-regular-webfont.woff2") format('woff2'), url("/static/fonts/alegreyasans-regular-webfont.woff") format('woff'), url("/static/fonts/alegreyasans-regular-webfont.ttf") format('truetype'), url("/static/fonts/alegreyasans-regular-webfont.svg#alegreya_sansregular") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -3092,7 +3100,7 @@ th {
 /* Text Container */
 
 .ui.text.container {
-  font-family: 'alegreyaregular', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'alegreya', "Palatino Linotype", "Book Antiqua", Palatino, serif;
   max-width: 700px !important;
   line-height: 1.5;
 }
@@ -3159,7 +3167,7 @@ th {
   border: none;
   margin: calc(2rem -  0.14285em ) 0em 1rem;
   padding: 0em 0em;
-  font-family: 'alegreyaregular', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'alegreya-sc', "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: bold;
   line-height: 1.2857em;
   text-transform: none;
@@ -8867,7 +8875,7 @@ ol.ui.list ol li,
 .ui.list > .item .header {
   display: block;
   margin: 0em;
-  font-family: 'alegreyaregular', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'alegreya-sc', "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -10169,7 +10177,7 @@ ol.ui.horizontal.list li:before,
 .ui.items > .item > .content > .header {
   display: inline-block;
   margin: -0.21425em 0em 0em;
-  font-family: 'alegreyaregular', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'alegreya-sc', "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
 }
