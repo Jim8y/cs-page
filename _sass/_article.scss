@@ -28,20 +28,17 @@ hr {
   list-style-type: disc;
 }
 
-@media (max-width: 500px) {
-  .table-of-contents {
-    display: none;
-  }
-}
-
 li span.date {
   font: inherit;
   float: right;
-  // width: 5rem;
 }
 
 @media (max-width: 500px) {
   li span.date {
+    display: none;
+  }
+
+  .table-of-contents {
     display: none;
   }
 }
