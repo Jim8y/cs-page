@@ -25,11 +25,6 @@ body {
   color: $color5;
 }
 
-footer {
-  color: $color4;
-  text-shadow: 0px 1px 0px #fff;
-}
-
 .canvas {
   @include box-shadow($color4 0px 0px 20px);
   background-color: $color1;
@@ -43,4 +38,13 @@ a {
 }
 a:hover {
   color: $black;
+}
+
+footer {
+  color: $color4;
+  text-shadow: 0px 1px 0px #fff;
+
+  a {
+    color: inherit;
+  }
 }

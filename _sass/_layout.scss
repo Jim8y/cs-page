@@ -35,10 +35,17 @@ blockquote p:last-child {
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+  margin: 1px;
+  width: 95%;
+}
+
 img.inline {
   display: inline-block;
   margin: 0 2px;
   vertical-align: middle;
+  width: auto;
 }
 
 .canvas {
