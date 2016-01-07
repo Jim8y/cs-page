@@ -45,6 +45,7 @@ blockquote {
   font-weight: 400;
   font-style: italic;
   font-size: 100%;
+  font-family: 'Lato';
   color: #7a7a7a;
 }
 
@@ -62,4 +63,9 @@ ul.blog-list {
   font-weight: 300;
   // font-size: 120%;
   line-height: 2.0rem;
+}
+
+
+.ui.label {
+  font-family: 'Lato';
 }
