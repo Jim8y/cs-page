@@ -16,15 +16,15 @@ title: Blogs by Tag
 {% assign tags_list = sorted_tags %}
 
 
-<div class="ui large labels">
+<div class="ui labels">
 {% include JB/tags_list %}
 </div>
 
 <h3 class="ui horizontal divider header">Articles</h3>
 {% for tag in sorted_tags %}
     {% assign actual_tag_name = tag | replace:'&#32;',' ' %}
-    <div class="ui small header" id="{{ actual_tag_name | replace:' ','-' | replace:'#','sharp' }}">
-      <div class="content"> {{ actual_tag_name }}</div>
+    <div class="ui label" id="{{ actual_tag_name | replace:' ','-' | replace:'#','sharp' }}">
+        <span><i class="tag icon"></i>{{ actual_tag_name }}</span>
     </div>
     {% assign pages_list = site.tags[actual_tag_name] %}
     {% include JB/pages_list.html %}
