@@ -17,8 +17,9 @@
 }
 
 body {
-  color: $black;
+  // color: $black;
   background-color: $color3;
+  font-weight: 300;
 }
 
 // #site-title, h1, h2, h3, h4, h5, h6 {
@@ -33,7 +34,6 @@ body {
 
 a {
   // color: black;
-  font-weight: 300;
   transition: color 0.2s ease;
   text-decoration: none;
 }
@@ -60,6 +60,6 @@ footer {
 
 ul.blog-list {
   font-weight: 300;
-  font-size: 120%;
+  // font-size: 120%;
   line-height: 2.0rem;
 }
