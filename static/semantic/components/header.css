@@ -20,8 +20,8 @@
   border: none;
   margin: calc(2rem -  0.14285em ) 0em 1rem;
   padding: 0em 0em;
-  font-family: 'Vollkorn', "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-weight: 500;
+  font-family: 'Lato', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: 300;
   line-height: 1.2857em;
   text-transform: none;
   color: rgba(0, 0, 0, 0.87);

@@ -21,9 +21,9 @@ body {
   background-color: $color3;
 }
 
-#site-title, h1, h2, h3, h4, h5, h6 {
-  color: $color5;
-}
+// #site-title, h1, h2, h3, h4, h5, h6 {
+//   color: $color44;
+// }
 
 .canvas {
   @include box-shadow($color4 0px 0px 20px);
@@ -32,7 +32,7 @@ body {
 }
 
 a {
-  color: $color5;
+  color: $color55;
   transition: color 0.2s ease;
   text-decoration: none;
 }
@@ -40,8 +40,16 @@ a:hover {
   color: $black;
 }
 
+blockquote {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 120%;
+  color: #7a7a7a;
+}
+
 footer {
   color: $color4;
+  font-weight: 300px;
   text-shadow: 0px 1px 0px #fff;
 
   a {
