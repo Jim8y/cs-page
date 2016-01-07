@@ -10,7 +10,7 @@ title: Blogs by Year
   {% if currentdate != date %}
     {% unless forloop.first %}</ul>{% endunless %}
     <h3 class="ui horizontal divider header"><i class="archive icon"></i>{{ currentdate }}</h3>
-    <ul>
+    <ul class="blog-list">
     {% assign date = currentdate %}
   {% endif %}
     <li>

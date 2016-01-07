@@ -1,5 +1,3 @@
-// @import "base";
-
 .sidebar {
   text-align: center;
   padding: 0rem;
@@ -14,6 +12,7 @@
   font-size: 4.0rem !important;
   font-family: 'Lato';
   font-weight: 600;
+  color: $black;
 }
 
 // navigator bar
@@ -23,7 +22,6 @@
   list-style: none;
   margin: 0.5rem;
   padding: 0 0;
-  font-weight: 300;
 
   li {
     display: inline;
