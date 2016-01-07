@@ -16,15 +16,15 @@
   box-shadow: $shadows;
 }
 
+// ------------------------
+// overall reset and theme
+// ------------------------
+
 body {
   // color: $black;
   background-color: $color3;
-  font-weight: 300;
+  font-weight: normal;
 }
-
-// #site-title, h1, h2, h3, h4, h5, h6 {
-//   color: $color44;
-// }
 
 .canvas {
   @include box-shadow($color4 0px 0px 20px);
@@ -32,15 +32,23 @@ body {
   @include border-radius(3px);
 }
 
+// ------------------------
+// links
+// ------------------------
 a {
   // color: black;
   transition: color 0.2s ease;
   text-decoration: none;
 }
+
 a:hover {
   color: black;
+  border-bottom: 1px dotted;
 }
 
+// ---------------------------
+// blockquote
+// ---------------------------
 blockquote {
   font-weight: 400;
   font-style: italic;
@@ -59,13 +67,32 @@ footer {
   }
 }
 
+// ----------------
+// ad hoc
+// ----------------
 ul.blog-list {
-  font-weight: 300;
+  // font-weight: 300;
   // font-size: 120%;
   line-height: 2.0rem;
 }
 
-
 .ui.label {
   font-family: 'Lato';
+}
+
+.pull.right {
+  float: right;
+}
+
+time {
+  font-weight: 300;
+  font-family: 'Lato';
+}
+
+strong {
+  font-weight: 500;
+}
+
+em {
+  font-style: italic;
 }

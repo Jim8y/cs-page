@@ -8,32 +8,14 @@ hr {
 }
 
 .table-of-contents {
-  float: right;
-  width: 40%;
-  // background: $grey;
-  padding: .5em .5em;
-  margin: 0.5em 0 0.5em 0.5em;
-  border: $color4 1px solid;
+  margin-right: 0 !important;
 }
 
 .table-of-contents h3 {
-  margin-bottom: 0;
+  margin-bottom: .5rem;
 }
 
 .table-of-contents ul {
   margin: 0;
   padding-left: 2em;
-}
-
-li span.date {
-  font: inherit;
-  float: right;
-}
-
-strong {
-  font-weight: 500;
-}
-
-em {
-  font-style: italic;
 }
