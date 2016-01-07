@@ -4,8 +4,8 @@
 
 @fontName: 'Lato';
 //
-@headerFont         : 'vollkorn', "Palatino Linotype", "Book Antiqua", Palatino, serif;
-@pageFont           : @fontName, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+@headerFont         : @fontName, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+@pageFont           : 'vollkorn', "Palatino Linotype", "Book Antiqua", Palatino, serif;
 //
 @importGoogleFonts  : false;
 
