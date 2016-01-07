@@ -1,38 +1,6 @@
-div.canvas > ul {
+.typeset > ul {
   list-style-position: inside;
   padding-left: 0;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-bottom: .5rem;
-}
-
-/* Misc */
-abbr {
-  font-size: 85%;
-  font-weight: bold;
-  color: #555;
-  text-transform: uppercase;
-}
-
-abbr[title] {
-  cursor: help;
-  border-bottom: 1px dotted #e5e5e5;
-}
-
-/* Quotes */
-blockquote {
-  padding: .5rem 1rem;
-  margin: 1em auto;
-  border-left: .25rem solid #e5e5e5;
-}
-
-blockquote p:last-child {
-  margin-bottom: 0;
 }
 
 img {

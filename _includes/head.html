@@ -7,20 +7,34 @@
   {% endif %}
 
   <link rel="stylesheet" href="/static/fonts.css">
-  
+
   <link rel="stylesheet" href="/static/semantic/semantic.css">
+  <link rel="stylesheet" href="/static/bib.css">
   <link rel="stylesheet" href="/static/screen.css">
   <link rel="stylesheet" href="/static/gruvbox.css">
-  <link rel="stylesheet" href="/static/bib.css">
 
   <script src="/static/jquery.min.js"></script>
   <script src="/static/main.js"></script>
   <script src="/static/toc.js"></script>
+  <script src="/static/js/responsive-nav.min.js"></script>
   <script src="/static/semantic/semantic.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
       $('.table-of-contents').toc();
+      $('#gridtoggle').click(function () {
+        // body...
+        $('#baseline').toggleClass('show-grid');
+      })
   });
   </script>
+  <!-- <script>
+  // Grid toggle
+  function changeClass() {
+    if ( document.getElementById("baseline").className.match(/(?:^|\s)show-grid(?!\S)/) ) {
+      document.getElementById("baseline").className = document.getElementById("baseline").className.replace( /(?:^|\s)show-grid(?!\S)/g , '' )
+    } else { document.getElementById("baseline").className += " show-grid"; }
+  }
+  document.getElementById("gridtoggle").addEventListener( 'click' , changeClass );
+  </script> -->
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 </head>

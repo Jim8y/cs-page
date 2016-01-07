@@ -1,6 +1,12 @@
 ---
 ---
 
+
+
+/* CSS compiled from SCSS. */
+/* --------------------------------------- */
+
+// load colors first
 @import "colors";
 @import "top";
 @import "layout";
@@ -8,3 +14,4 @@
 @import "code";
 @import "article";
 @import "responsive";
+@import "show-grid";

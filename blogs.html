@@ -3,7 +3,7 @@ layout: default
 title: Blogs by Year
 ---
 
-<h1 class="ui center aligned header">{{ page.title }}</h1>
+<h1>{{ page.title }}</h1>
 
 {% for post in site.posts %}
   {% assign currentdate = post.date | date: "%Y" %}
@@ -29,8 +29,8 @@ title: Blogs by Year
 {% assign sorted_tags = tags | split:' ' | sort %}
 {% assign tags_list = sorted_tags %}
 
-<h1 class="ui center aligned header">Tags</h1>
+<h1>Tags</h1>
 
-<div class="ui large labels">
+<div class="ui labels">
 {% include JB/tags_list %}
 </div>

@@ -21,7 +21,7 @@
 // ------------------------
 
 body {
-  // color: $black;
+  color: $black;
   background-color: $color3;
   font-weight: normal;
 }
@@ -35,27 +35,6 @@ body {
 // ------------------------
 // links
 // ------------------------
-a {
-  // color: black;
-  transition: color 0.2s ease;
-  text-decoration: none;
-}
-
-a:hover {
-  color: black;
-  border-bottom: 1px dotted;
-}
-
-// ---------------------------
-// blockquote
-// ---------------------------
-blockquote {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 100%;
-  font-family: 'Lato';
-  color: #7a7a7a;
-}
 
 footer {
   color: $color4;
@@ -76,7 +55,7 @@ ul.blog-list {
   line-height: 2.0rem;
 }
 
-.ui.label {
+.ui.label, .ui.button {
   font-family: 'Lato';
 }
 
@@ -95,4 +74,12 @@ strong {
 
 em {
   font-style: italic;
+}
+
+.article-header {
+  font-family: 'Lato';
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
 }

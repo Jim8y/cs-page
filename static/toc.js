@@ -79,10 +79,10 @@
       .each(function(_, header) {
         this_level = get_level(header);
 
-        // make it a semantic-ui header :)
-        if (this_level === highest_level) {
-          $(header).addClass('ui header');
-        }
+        // // make it a semantic-ui header :)
+        // if (this_level === highest_level) {
+        //   $(header).addClass('ui header');
+        // }
 
         if (this_level === level) {
           // same level as before; same indenting

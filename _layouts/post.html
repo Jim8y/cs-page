@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: base
 ---
 
-<h1 class="ui center aligned header article-header">{{ page.title }}</h1>
+<h1 class="article-header">{{ page.title }}</h1>
 
 <div class="ui horizontal divider desktop">
   <div class="ui celled horizontal list">
@@ -44,4 +44,6 @@ layout: default
 
 <div class="ui right floated segment table-of-contents"></div>
 
-{{ content }}
+<div id="baseline" class="typeset">
+    {{ content }}
+</div>

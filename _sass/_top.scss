@@ -1,4 +1,4 @@
-.sidebar {
+header {
   text-align: center;
   padding: 0rem;
   margin: 0;
@@ -9,6 +9,7 @@
 // title
 #site-title {
   margin: .5rem;
+  line-height: normal;
   font-size: 4.0rem !important;
   font-family: 'Lato';
   font-weight: 600;
