@@ -689,10 +689,6 @@ input::selection {
   bottom: -7.75px;
 }
 
-.typeset h1 * {
-  vertical-align: bottom;
-}
-
 .typeset h2 {
   font-size: 26px;
   line-height: 50px;
@@ -714,10 +710,6 @@ input::selection {
   bottom: -6.5px;
 }
 
-.typeset h2 * {
-  vertical-align: bottom;
-}
-
 .typeset h3 {
   font-size: 22px;
   line-height: 25px;
@@ -737,10 +729,6 @@ input::selection {
   font-size: 65%;
   position: relative;
   bottom: -5.5px;
-}
-
-.typeset h3 * {
-  vertical-align: bottom;
 }
 
 .typeset p,
@@ -767,11 +755,6 @@ input::selection {
   bottom: -4.5px;
 }
 
-.typeset p *,
-.typeset ul * {
-  vertical-align: bottom;
-}
-
 .typeset code {
   font-size: 12px;
   line-height: 25px;
@@ -793,10 +776,6 @@ input::selection {
   bottom: -3px;
 }
 
-.typeset code * {
-  vertical-align: bottom;
-}
-
 .typeset li {
   font-size: 18px;
   line-height: 25px;
@@ -816,10 +795,6 @@ input::selection {
   font-size: 65%;
   position: relative;
   bottom: -4.5px;
-}
-
-.typeset li * {
-  vertical-align: bottom;
 }
 
 .typeset pre {

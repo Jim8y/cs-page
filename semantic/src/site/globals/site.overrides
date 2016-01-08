@@ -42,9 +42,9 @@
             bottom: 0 - (@font-size / 4);
         }
 
-        * {
-            vertical-align: bottom;
-        }
+        // * {
+        //     vertical-align: middle;
+        // }
     }
 
     // a nested container within a rhythm-container,
