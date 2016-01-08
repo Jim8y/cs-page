@@ -8,7 +8,8 @@
 
 .table-of-contents ul {
   margin: 0;
-  padding-left: 2em;
+  list-style-position: inside;
+  padding-left: 0;
 }
 
 p:first-child:first-letter {

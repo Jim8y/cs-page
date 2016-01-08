@@ -16,7 +16,7 @@ It turned out there are tools scattering around. This note briefly documented
 the way I combined them together to generate call graphs from C/C++ source
 code.
 
-# `opt` and `dot`
+# Dump callgraphs with clang
 
 `clang` has a nice tools `opt` that is capable of doing various optimizations
 and analyses. Quoted from the [documentation][2]:
@@ -29,7 +29,7 @@ In particular, the `-dot-callgraph` option will dump the call graph to `callgrap
 clang++ -S -emit-llvm main.cpp $(CFLAGS) -o - | opt -analyze -dot-callgraph
 ```
 
-# de-mangling using `c++filt`
+# De-mangling using c++filt
 
 Function names in the dot callgraph are mangled and not readable by human.
 To de-mangle it, [`c++filt`][1] can be used:
@@ -52,7 +52,7 @@ many other formats:
 
 Here we go! A callgraph is generated.
 
-# Python and networkx
+# Fine-tune with networkx
 
 If further analysis is desired, `networkx` package for Python is handy and powerful.
 It can read and write `dot` files so at the end of day, one can draw the
@@ -66,8 +66,8 @@ call graph using the same `dot` command.
 brew install binutils
 ```
 
-`opt` is provided in the llvm package, can you might have to link it manually
-to `/usr/local/bin` (or anywhere else in your `$PATH`)
+opt is in the llvm package, can you might have to link it manually
+to /usr/local/bin (or anywhere in your `$PATH`)
 
 ```
 ln -s /usr/local/Cellar/llvm/3.6.2/bin/opt /usr/local/bin/opt

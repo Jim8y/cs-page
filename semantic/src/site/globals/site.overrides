@@ -113,8 +113,8 @@
             #rhythmless > .rhythm(@font-size, @margin);
         }
 
-        code {
-            #rhythmless > .rhythm(12px);
+        pre, code {
+            #rhythmless > .rhythm(@font-size);
         }
 
         li {
@@ -129,6 +129,10 @@
           #rhythmless > .rhythm(@font-size, @margin);
         }
 
+        blockquote {
+          #rhythmless > .rhythm(@font-size, @margin);
+        }
+
     }
 }
 
@@ -137,7 +141,7 @@
 }
 
 .typeset pre {
-  #rhythmless > .nested-container(1rem, 0px);
-  padding-left: 1rem;
-  padding-right: 1rem;
+  #rhythmless > .nested-container(5px, 0px);
+  padding-left: 10px;
+  padding-right: 10px;
 }

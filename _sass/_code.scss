@@ -4,38 +4,34 @@ pre {
   font-family: Menlo, Monaco, monospace;
 }
 code {
-  font-size: 80%;
+  // font-size: 80% !important;
   border-radius: 3px;
   background: $color2;
   color: $color5;
 }
 
 :not(pre) > code {
-  padding: 3px 3px;
-  vertical-align: middle;
+  padding: 0px 3px;
 }
 
 pre {
-  display: block;
-  font-size: .8rem;
-  line-height: 1.4;
-  white-space: pre;
+  font-size: 12px !important;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
   overflow-y: hidden;
   overflow-x: auto;
+
 }
+
 pre code {
-  line-height: normal;
-  font-size: 100%;
   color: inherit;
   word-wrap: normal;
-  white-space: pre;
+  font-size: 12px !important;
   background: none;
+
 }
+
 .highlight {
-  border-radius: 4px;
-}
-.highlight pre {
+  border-radius: 3px;
 }
