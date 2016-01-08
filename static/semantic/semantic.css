@@ -529,7 +529,7 @@ body {
   min-width: 320px;
   background: #FFFFFF;
   font-family: 'vollkorn', "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
   font-smoothing: antialiased;
@@ -812,6 +812,27 @@ input::selection {
 }
 
 .typeset ul ul sub {
+  vertical-align: bottom;
+  font-size: 65%;
+  position: relative;
+  bottom: -4.5px;
+}
+
+.typeset hr {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.typeset hr sup {
+  vertical-align: top;
+  font-size: 65%;
+  position: relative;
+  top: -4.5px;
+}
+
+.typeset hr sub {
   vertical-align: bottom;
   font-size: 65%;
   position: relative;

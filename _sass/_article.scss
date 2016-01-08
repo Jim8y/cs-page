@@ -10,3 +10,9 @@
   margin: 0;
   padding-left: 2em;
 }
+
+p:first-child:first-letter {
+    font-size: 48px;
+    float: left;
+    padding: 10px;
+}

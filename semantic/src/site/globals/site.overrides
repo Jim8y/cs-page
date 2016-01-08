@@ -11,8 +11,9 @@
 
 // global defaults, these can (and usually should) be overwritten by
 // the file that includes this
-@rhythmic-unit: 25px;
-@rhythmic-fontsize: 18px;
+@fontSize           : 16px;
+@rhythmic-unit      : 25px;
+@rhythmic-fontsize  : @fontSize;
 
 #rhythmless {
     // the base mixin used by all block-level elements within the
@@ -123,6 +124,10 @@
 
         ul  ul {
             #rhythmless > .rhythm(@font-size, 0);
+        }
+
+        hr {
+          #rhythmless > .rhythm(@font-size, @margin);
         }
 
     }
