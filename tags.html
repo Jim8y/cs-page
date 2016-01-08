@@ -17,7 +17,7 @@ title: Blogs by Tag
 
 
 <div class="ui labels">
-{% include JB/tags_list %}
+{% include tags_list.html %}
 </div>
 
 <h3 class="ui horizontal divider header">Articles</h3>
@@ -27,5 +27,5 @@ title: Blogs by Tag
         <span><i class="tag icon"></i>{{ actual_tag_name }}</span>
     </div>
     {% assign pages_list = site.tags[actual_tag_name] %}
-    {% include JB/pages_list.html %}
+    {% include pages_list.html %}
 {% endfor %}

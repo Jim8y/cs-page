@@ -669,7 +669,7 @@ input::selection {
 *******************************/
 
 .typeset h1 {
-  font-size: 31px;
+  font-size: 28px;
   line-height: 50px;
   margin-bottom: 25px;
   margin-top: 25px;
@@ -679,19 +679,19 @@ input::selection {
   vertical-align: top;
   font-size: 65%;
   position: relative;
-  top: -7.75px;
+  top: -7px;
 }
 
 .typeset h1 sub {
   vertical-align: bottom;
   font-size: 65%;
   position: relative;
-  bottom: -7.75px;
+  bottom: -7px;
 }
 
 .typeset h2 {
-  font-size: 26px;
-  line-height: 50px;
+  font-size: 23px;
+  line-height: 25px;
   margin-bottom: 25px;
   margin-top: 25px;
 }
@@ -700,18 +700,18 @@ input::selection {
   vertical-align: top;
   font-size: 65%;
   position: relative;
-  top: -6.5px;
+  top: -5.75px;
 }
 
 .typeset h2 sub {
   vertical-align: bottom;
   font-size: 65%;
   position: relative;
-  bottom: -6.5px;
+  bottom: -5.75px;
 }
 
 .typeset h3 {
-  font-size: 22px;
+  font-size: 19px;
   line-height: 25px;
   margin-bottom: 25px;
   margin-top: 25px;
@@ -721,19 +721,19 @@ input::selection {
   vertical-align: top;
   font-size: 65%;
   position: relative;
-  top: -5.5px;
+  top: -4.75px;
 }
 
 .typeset h3 sub {
   vertical-align: bottom;
   font-size: 65%;
   position: relative;
-  bottom: -5.5px;
+  bottom: -4.75px;
 }
 
 .typeset p,
 .typeset ul {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   margin-bottom: 25px;
   margin-top: 25px;
@@ -744,7 +744,7 @@ input::selection {
   vertical-align: top;
   font-size: 65%;
   position: relative;
-  top: -4.5px;
+  top: -4px;
 }
 
 .typeset p sub,
@@ -752,7 +752,7 @@ input::selection {
   vertical-align: bottom;
   font-size: 65%;
   position: relative;
-  bottom: -4.5px;
+  bottom: -4px;
 }
 
 .typeset code {
@@ -777,7 +777,7 @@ input::selection {
 }
 
 .typeset li {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   margin-bottom: 0;
   margin-top: 0;
@@ -787,18 +787,18 @@ input::selection {
   vertical-align: top;
   font-size: 65%;
   position: relative;
-  top: -4.5px;
+  top: -4px;
 }
 
 .typeset li sub {
   vertical-align: bottom;
   font-size: 65%;
   position: relative;
-  bottom: -4.5px;
+  bottom: -4px;
 }
 
 .typeset ul ul {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   margin-bottom: 0;
   margin-top: 0;
@@ -808,18 +808,18 @@ input::selection {
   vertical-align: top;
   font-size: 65%;
   position: relative;
-  top: -4.5px;
+  top: -4px;
 }
 
 .typeset ul ul sub {
   vertical-align: bottom;
   font-size: 65%;
   position: relative;
-  bottom: -4.5px;
+  bottom: -4px;
 }
 
 .typeset hr {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   margin-bottom: 25px;
   margin-top: 25px;
@@ -829,14 +829,14 @@ input::selection {
   vertical-align: top;
   font-size: 65%;
   position: relative;
-  top: -4.5px;
+  top: -4px;
 }
 
 .typeset hr sub {
   vertical-align: bottom;
   font-size: 65%;
   position: relative;
-  bottom: -4.5px;
+  bottom: -4px;
 }
 
 .typeset pre {

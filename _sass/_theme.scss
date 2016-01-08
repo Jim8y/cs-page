@@ -10,7 +10,6 @@
   background-clip: padding-box;
 }
 
-
 @mixin box-shadow($shadows...) {
   -moz-box-shadow: $shadows;
   -webkit-box-shadow: $shadows;
