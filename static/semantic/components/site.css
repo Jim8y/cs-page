@@ -269,6 +269,24 @@ input::selection {
   position: relative;
   bottom: -4.5px;
 }
+.typeset ul ul {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.typeset ul ul sup {
+  vertical-align: top;
+  font-size: 65%;
+  position: relative;
+  top: -4.5px;
+}
+.typeset ul ul sub {
+  vertical-align: bottom;
+  font-size: 65%;
+  position: relative;
+  bottom: -4.5px;
+}
 .typeset pre {
   margin-top: -1rem;
   margin-bottom: -1rem;
@@ -283,9 +301,4 @@ input::selection {
 }
 .typeset pre :last-child {
   margin-bottom: 0;
-}
-#baseline .show-grid {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(96%, white), color-stop(96%, red), to(red));
-  background: -moz-linear-gradient(top, white, white 96%, red 96%, red);
-  background-size: auto 25px;
 }
