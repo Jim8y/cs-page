@@ -69,6 +69,15 @@ footer {
 // ----------------
 // ad hoc
 // ----------------
+ul, ol {
+  list-style: disc;
+}
+
+ul  ul {
+  list-style: circle;
+  margin-left: 2.0rem;
+}
+
 ul.blog-list {
   // font-weight: 300;
   // font-size: 120%;
@@ -102,6 +111,7 @@ em {
   font-weight: 300;
   line-height: normal;
   text-align: center;
+  margin: 2rem 0;
 }
 
 // -------
