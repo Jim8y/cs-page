@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-> “It’s hard to do a really good job on anything you don’t think about in the shower.”
+> It’s hard to do a really good job on anything you don’t think about in the shower.
 – Paul Graham
 
 # Bio
