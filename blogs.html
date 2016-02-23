@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Blogs by Year
+title: Blogs
 ---
 
-<h1>{{ page.title }}</h1>
+<h1>Blogs</h1>
+
+<p>I blog for fun. Most of my blogs are about programming in various languages, systems security, Linux hacks and similar stuff. 
+Nothing terribly deep. But they are a lot of fun.</p>
 
 {% for post in site.posts %}
   {% assign currentdate = post.date | date: "%Y" %}
@@ -29,7 +32,7 @@ title: Blogs by Year
 {% assign sorted_tags = tags | split:' ' | sort %}
 {% assign tags_list = sorted_tags %}
 
-<h1>Tags</h1>
+<h3 class="ui horizontal divider header"><i class="archive icon"></i>Tags</h3>
 
 <div class="ui labels">
 {% include tags_list.html %}

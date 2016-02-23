@@ -28,7 +28,7 @@ from [Tsinghua University][thu].
 
 # Publication
 
-{% include bin.html %}
+{% include pub.html %}
 
 
 # Contact
