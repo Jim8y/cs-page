@@ -1,3 +1,11 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.divider {
+  font-size: inherit;
+}
+
+.ui.divider > .icon {
+  font-size: inherit;
+}

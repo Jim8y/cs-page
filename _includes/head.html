@@ -6,21 +6,19 @@
     <meta http-equiv="refresh" content="5; url=/">
   {% endif %}
 
-  <link rel="stylesheet" href="/static/fonts.css">
-
-  <link rel="stylesheet" href="/static/semantic/semantic.min.css">
+  <link rel="stylesheet" href="/static/semantic/semantic.css">
   <link rel="stylesheet" href="/static/main.css">
   <link rel="stylesheet" href="/static/gruvbox.css">
 
-  <script src="/static/jquery.min.js"></script>
+  <script src="/static/jquery-1.12.1.min.js"></script>
   <script src="/static/main.js"></script>
   <script src="/static/semantic/semantic.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
-      $('.table-of-contents').toc();
-      $('#gridtoggle').click(function () {
-        // body...
-        $('#baseline').toggleClass('show-grid');
+      $('.show-sidebar').click(function () {
+        $('.ui.sidebar')
+          .sidebar('toggle')
+        ;
       })
   });
   </script>

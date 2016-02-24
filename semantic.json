@@ -17,20 +17,20 @@
   },
   "permission": false,
   "rtl": false,
-  "components" : [
-      "reset",
-      "site",
-      "grid",
-      "container",
-      "icon",
-      "label",
-      "list",
-      "divider",
-      "item",
-      "menu",
-      "segment",
-      "button",
-      "sidebar"
+  "components": [
+    "reset",
+    "site",
+    "grid",
+    "container",
+    "icon",
+    "label",
+    "list",
+    "divider",
+    "item",
+    "menu",
+    "segment",
+    "button",
+    "sidebar"
   ],
-  "version": "2.1.6"
+  "version": "2.1.8"
 }

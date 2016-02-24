@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.1.6 - List
+ * # Semantic UI 2.1.8 - List
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -265,6 +265,7 @@ ol.ui.list ol li,
 
 .ui.horizontal.list {
   display: inline-block;
+  font-size: 0em;
 }
 .ui.horizontal.list > .item {
   display: inline-block;
