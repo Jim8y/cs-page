@@ -3,6 +3,7 @@ header {
   /*background: black;*/
   padding-top: 1rem;
   padding-left: 1rem;
+  padding-bottom: 2rem;
 }
 
 blockquote {
@@ -35,7 +36,6 @@ blockquote p {
 footer {
   font-size: 80%;
   color: #ccc;
-  padding: 1rem;
 }
 
 footer a {

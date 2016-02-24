@@ -30,7 +30,8 @@
     "menu",
     "segment",
     "button",
-    "sidebar"
+    "sidebar",
+    "image"
   ],
   "version": "2.1.8"
 }
