@@ -2,15 +2,14 @@
      User Global Variables
 *******************************/
 
-@fontName : 'Lato';
-@font2    : 'vollkorn';
+// @fontName : 'Lato';
+// @font2    : 'vollkorn';
 //
-@headerFont         : @fontName, "Palatino Linotype", "Book Antiqua", Palatino, serif;
-@pageFont           : @font2, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+// @headerFont         : @fontName, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+// @pageFont           : @font2, "Palatino Linotype", "Book Antiqua", Palatino, serif;
 //
 @importGoogleFonts  : false;
 
 @headerFontWeight   : 300;
-
 
 @fontSize           : 16px;

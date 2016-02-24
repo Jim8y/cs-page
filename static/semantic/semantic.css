@@ -45,122 +45,6 @@ input[type="password"] {
   -moz-appearance: none;
   /* mobile firefox too! */
 }
-
-/*******************************
-         Site Overrides
-*******************************/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-}
-
-/* remember to define focus styles! */
-
-:focus {
-  outline: 0;
-}
-
-body {
-  line-height: 1;
-  color: black;
-  background: white;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-/* tables still need 'cellspacing="0"' in the markup */
-
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-caption,
-th,
-td {
-  text-align: left;
-  font-weight: normal;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-}
-
-blockquote,
-q {
-  quotes: "" "";
-}
 /*!
  * # Semantic UI 2.1.6 - Site
  * http://github.com/semantic-org/semantic-ui/
@@ -191,7 +75,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background: #FFFFFF;
-  font-family: 'vollkorn', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
@@ -207,7 +91,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Lato', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.2857em;
   margin: calc(2rem -  0.14285em ) 0em 1rem;
   font-weight: 300;
@@ -326,223 +210,6 @@ input::selection {
 /*******************************
         Global Overrides
 *******************************/
-
-/*******************************
-         Site Overrides
-*******************************/
-
-.typeset h1 {
-  font-size: 28px;
-  line-height: 50px;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.typeset h1 sup {
-  vertical-align: top;
-  font-size: 65%;
-  position: relative;
-  top: -7px;
-}
-
-.typeset h1 sub {
-  vertical-align: bottom;
-  font-size: 65%;
-  position: relative;
-  bottom: -7px;
-}
-
-.typeset h2 {
-  font-size: 23px;
-  line-height: 25px;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.typeset h2 sup {
-  vertical-align: top;
-  font-size: 65%;
-  position: relative;
-  top: -5.75px;
-}
-
-.typeset h2 sub {
-  vertical-align: bottom;
-  font-size: 65%;
-  position: relative;
-  bottom: -5.75px;
-}
-
-.typeset h3 {
-  font-size: 19px;
-  line-height: 25px;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.typeset h3 sup {
-  vertical-align: top;
-  font-size: 65%;
-  position: relative;
-  top: -4.75px;
-}
-
-.typeset h3 sub {
-  vertical-align: bottom;
-  font-size: 65%;
-  position: relative;
-  bottom: -4.75px;
-}
-
-.typeset p,
-.typeset ul {
-  font-size: 16px;
-  line-height: 25px;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.typeset p sup,
-.typeset ul sup {
-  vertical-align: top;
-  font-size: 65%;
-  position: relative;
-  top: -4px;
-}
-
-.typeset p sub,
-.typeset ul sub {
-  vertical-align: bottom;
-  font-size: 65%;
-  position: relative;
-  bottom: -4px;
-}
-
-.typeset pre,
-.typeset code {
-  font-size: 16px;
-  line-height: 25px;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.typeset pre sup,
-.typeset code sup {
-  vertical-align: top;
-  font-size: 65%;
-  position: relative;
-  top: -4px;
-}
-
-.typeset pre sub,
-.typeset code sub {
-  vertical-align: bottom;
-  font-size: 65%;
-  position: relative;
-  bottom: -4px;
-}
-
-.typeset li {
-  font-size: 16px;
-  line-height: 25px;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.typeset li sup {
-  vertical-align: top;
-  font-size: 65%;
-  position: relative;
-  top: -4px;
-}
-
-.typeset li sub {
-  vertical-align: bottom;
-  font-size: 65%;
-  position: relative;
-  bottom: -4px;
-}
-
-.typeset ul ul {
-  font-size: 16px;
-  line-height: 25px;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.typeset ul ul sup {
-  vertical-align: top;
-  font-size: 65%;
-  position: relative;
-  top: -4px;
-}
-
-.typeset ul ul sub {
-  vertical-align: bottom;
-  font-size: 65%;
-  position: relative;
-  bottom: -4px;
-}
-
-.typeset hr {
-  font-size: 16px;
-  line-height: 25px;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.typeset hr sup {
-  vertical-align: top;
-  font-size: 65%;
-  position: relative;
-  top: -4px;
-}
-
-.typeset hr sub {
-  vertical-align: bottom;
-  font-size: 65%;
-  position: relative;
-  bottom: -4px;
-}
-
-.typeset blockquote {
-  font-size: 16px;
-  line-height: 25px;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.typeset blockquote sup {
-  vertical-align: top;
-  font-size: 65%;
-  position: relative;
-  top: -4px;
-}
-
-.typeset blockquote sub {
-  vertical-align: bottom;
-  font-size: 65%;
-  position: relative;
-  bottom: -4px;
-}
-
-.typeset pre {
-  margin-top: -5px;
-  margin-bottom: -5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-width: 0px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.typeset pre :first-child {
-  margin-top: 0;
-}
-
-.typeset pre :last-child {
-  margin-bottom: 0;
-}
 /*!
  * # Semantic UI 2.1.6 - Grid
  * http://github.com/semantic-org/semantic-ui/
@@ -2957,7 +2624,7 @@ input::selection {
 /* Text Container */
 
 .ui.text.container {
-  font-family: 'vollkorn', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   max-width: 700px !important;
   line-height: 1.5;
 }
@@ -7911,7 +7578,7 @@ ol.ui.list ol li,
 .ui.list > .item .header {
   display: block;
   margin: 0em;
-  font-family: 'Lato', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -9213,7 +8880,7 @@ ol.ui.horizontal.list li:before,
 .ui.items > .item > .content > .header {
   display: inline-block;
   margin: -0.21425em 0em 0em;
-  font-family: 'Lato', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
 }
@@ -9602,7 +9269,7 @@ ol.ui.horizontal.list li:before,
   display: -ms-flexbox;
   display: flex;
   margin: 1rem 0em;
-  font-family: 'vollkorn', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: #FFFFFF;
   font-weight: normal;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -12642,7 +12309,7 @@ Floated Menu / Item
   vertical-align: baseline;
   background: #E0E1E2 none;
   color: rgba(0, 0, 0, 0.6);
-  font-family: 'vollkorn', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0em 0.25em 0em 0em;
   padding: 0.78571429em 1.5em 0.78571429em;
   text-transform: none;
@@ -16404,6 +16071,707 @@ Floated Menu / Item
 .ui.vertical.buttons .gigantic.button:last-child {
   margin-bottom: 0px;
   border-radius: 0px 0px 0.28571429rem 0.28571429rem;
+}
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
+/*!
+ * # Semantic UI 2.1.6 - Sidebar
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2015 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+            Sidebar
+*******************************/
+
+/* Sidebar Menu */
+
+.ui.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: none;
+  transition: none;
+  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 100% !important;
+  max-height: 100%;
+  border-radius: 0em !important;
+  margin: 0em !important;
+  overflow-y: auto !important;
+  z-index: 102;
+}
+
+/* GPU Layers for Child Elements */
+
+.ui.sidebar > * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
+}
+
+/*--------------
+   Direction
+---------------*/
+
+.ui.left.sidebar {
+  right: auto;
+  left: 0px;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.ui.right.sidebar {
+  right: 0px !important;
+  left: auto !important;
+  -webkit-transform: translate3d(100%, 0%, 0);
+  transform: translate3d(100%, 0%, 0);
+}
+
+.ui.top.sidebar,
+.ui.bottom.sidebar {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.ui.top.sidebar {
+  top: 0px !important;
+  bottom: auto !important;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+.ui.bottom.sidebar {
+  top: auto !important;
+  bottom: 0px !important;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+/*--------------
+     Pushable
+---------------*/
+
+.pushable {
+  height: 100%;
+  overflow-x: hidden;
+  padding: 0em !important;
+}
+
+/* Whole Page */
+
+body.pushable {
+  background: #545454 !important;
+}
+
+/* Page Context */
+
+.pushable:not(body) {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.pushable:not(body) > .ui.sidebar,
+.pushable:not(body) > .fixed,
+.pushable:not(body) > .pusher:after {
+  position: absolute;
+}
+
+/*--------------
+     Fixed
+---------------*/
+
+.pushable > .fixed {
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  will-change: transform;
+  z-index: 101;
+}
+
+/*--------------
+     Page
+---------------*/
+
+.pushable > .pusher {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  min-height: 100%;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  z-index: 2;
+}
+
+body.pushable > .pusher {
+  background: #FFFFFF;
+}
+
+/* Pusher should inherit background from context */
+
+.pushable > .pusher {
+  background: inherit;
+}
+
+/*--------------
+     Dimmer
+---------------*/
+
+.pushable > .pusher:after {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  will-change: opacity;
+  z-index: 1000;
+}
+
+/*--------------
+    Coupling
+---------------*/
+
+.ui.sidebar.menu .item {
+  border-radius: 0em !important;
+}
+
+/*******************************
+            States
+*******************************/
+
+/*--------------
+     Dimmed
+---------------*/
+
+.pushable > .pusher.dimmed:after {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+}
+
+/*--------------
+    Animating
+---------------*/
+
+.ui.animating.sidebar {
+  visibility: visible;
+}
+
+/*--------------
+     Visible
+---------------*/
+
+.ui.visible.sidebar {
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Shadow Direction */
+
+.ui.left.visible.sidebar,
+.ui.right.visible.sidebar {
+  box-shadow: 0px 0px 20px rgba(34, 36, 38, 0.15);
+}
+
+.ui.top.visible.sidebar,
+.ui.bottom.visible.sidebar {
+  box-shadow: 0px 0px 20px rgba(34, 36, 38, 0.15);
+}
+
+/* Visible On Load */
+
+.ui.visible.left.sidebar ~ .fixed,
+.ui.visible.left.sidebar ~ .pusher {
+  -webkit-transform: translate3d(260px, 0, 0);
+  transform: translate3d(260px, 0, 0);
+}
+
+.ui.visible.right.sidebar ~ .fixed,
+.ui.visible.right.sidebar ~ .pusher {
+  -webkit-transform: translate3d(-260px, 0, 0);
+  transform: translate3d(-260px, 0, 0);
+}
+
+.ui.visible.top.sidebar ~ .fixed,
+.ui.visible.top.sidebar ~ .pusher {
+  -webkit-transform: translate3d(0, 36px, 0);
+  transform: translate3d(0, 36px, 0);
+}
+
+.ui.visible.bottom.sidebar ~ .fixed,
+.ui.visible.bottom.sidebar ~ .pusher {
+  -webkit-transform: translate3d(0, -36px, 0);
+  transform: translate3d(0, -36px, 0);
+}
+
+/* opposite sides visible forces content overlay */
+
+.ui.visible.left.sidebar ~ .ui.visible.right.sidebar ~ .fixed,
+.ui.visible.left.sidebar ~ .ui.visible.right.sidebar ~ .pusher,
+.ui.visible.right.sidebar ~ .ui.visible.left.sidebar ~ .fixed,
+.ui.visible.right.sidebar ~ .ui.visible.left.sidebar ~ .pusher {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/*--------------
+       iOS
+---------------*/
+
+/*
+  iOS incorrectly sizes document when content
+  is presented outside of view with 2Dtranslate
+*/
+
+html.ios {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+html.ios,
+html.ios body {
+  height: initial !important;
+}
+
+/*******************************
+          Variations
+*******************************/
+
+/*--------------
+     Width
+---------------*/
+
+/* Left / Right */
+
+.ui[class*="very thin"].left.sidebar,
+.ui[class*="very thin"].right.sidebar {
+  width: 60px;
+}
+
+.ui.thin.left.sidebar,
+.ui.thin.right.sidebar {
+  width: 150px;
+}
+
+.ui.left.sidebar,
+.ui.right.sidebar {
+  width: 260px;
+}
+
+.ui.wide.left.sidebar,
+.ui.wide.right.sidebar {
+  width: 350px;
+}
+
+.ui[class*="very wide"].left.sidebar,
+.ui[class*="very wide"].right.sidebar {
+  width: 475px;
+}
+
+/* Left Visible */
+
+.ui.visible[class*="very thin"].left.sidebar ~ .fixed,
+.ui.visible[class*="very thin"].left.sidebar ~ .pusher {
+  -webkit-transform: translate3d(60px, 0, 0);
+  transform: translate3d(60px, 0, 0);
+}
+
+.ui.visible.thin.left.sidebar ~ .fixed,
+.ui.visible.thin.left.sidebar ~ .pusher {
+  -webkit-transform: translate3d(150px, 0, 0);
+  transform: translate3d(150px, 0, 0);
+}
+
+.ui.visible.wide.left.sidebar ~ .fixed,
+.ui.visible.wide.left.sidebar ~ .pusher {
+  -webkit-transform: translate3d(350px, 0, 0);
+  transform: translate3d(350px, 0, 0);
+}
+
+.ui.visible[class*="very wide"].left.sidebar ~ .fixed,
+.ui.visible[class*="very wide"].left.sidebar ~ .pusher {
+  -webkit-transform: translate3d(475px, 0, 0);
+  transform: translate3d(475px, 0, 0);
+}
+
+/* Right Visible */
+
+.ui.visible[class*="very thin"].right.sidebar ~ .fixed,
+.ui.visible[class*="very thin"].right.sidebar ~ .pusher {
+  -webkit-transform: translate3d(-60px, 0, 0);
+  transform: translate3d(-60px, 0, 0);
+}
+
+.ui.visible.thin.right.sidebar ~ .fixed,
+.ui.visible.thin.right.sidebar ~ .pusher {
+  -webkit-transform: translate3d(-150px, 0, 0);
+  transform: translate3d(-150px, 0, 0);
+}
+
+.ui.visible.wide.right.sidebar ~ .fixed,
+.ui.visible.wide.right.sidebar ~ .pusher {
+  -webkit-transform: translate3d(-350px, 0, 0);
+  transform: translate3d(-350px, 0, 0);
+}
+
+.ui.visible[class*="very wide"].right.sidebar ~ .fixed,
+.ui.visible[class*="very wide"].right.sidebar ~ .pusher {
+  -webkit-transform: translate3d(-475px, 0, 0);
+  transform: translate3d(-475px, 0, 0);
+}
+
+/*******************************
+          Animations
+*******************************/
+
+/*--------------
+    Overlay
+---------------*/
+
+/* Set-up */
+
+.ui.overlay.sidebar {
+  z-index: 102;
+}
+
+/* Initial */
+
+.ui.left.overlay.sidebar {
+  -webkit-transform: translate3d(-100%, 0%, 0);
+  transform: translate3d(-100%, 0%, 0);
+}
+
+.ui.right.overlay.sidebar {
+  -webkit-transform: translate3d(100%, 0%, 0);
+  transform: translate3d(100%, 0%, 0);
+}
+
+.ui.top.overlay.sidebar {
+  -webkit-transform: translate3d(0%, -100%, 0);
+  transform: translate3d(0%, -100%, 0);
+}
+
+.ui.bottom.overlay.sidebar {
+  -webkit-transform: translate3d(0%, 100%, 0);
+  transform: translate3d(0%, 100%, 0);
+}
+
+/* Animation */
+
+.animating.ui.overlay.sidebar,
+.ui.visible.overlay.sidebar {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+/* End - Sidebar */
+
+.ui.visible.left.overlay.sidebar {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+}
+
+.ui.visible.right.overlay.sidebar {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+}
+
+.ui.visible.top.overlay.sidebar {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+}
+
+.ui.visible.bottom.overlay.sidebar {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+}
+
+/* End - Pusher */
+
+.ui.visible.overlay.sidebar ~ .fixed,
+.ui.visible.overlay.sidebar ~ .pusher {
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+/*--------------
+      Push
+---------------*/
+
+/* Initial */
+
+.ui.push.sidebar {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  z-index: 102;
+}
+
+/* Sidebar - Initial */
+
+.ui.left.push.sidebar {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.ui.right.push.sidebar {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+.ui.top.push.sidebar {
+  -webkit-transform: translate3d(0%, -100%, 0);
+  transform: translate3d(0%, -100%, 0);
+}
+
+.ui.bottom.push.sidebar {
+  -webkit-transform: translate3d(0%, 100%, 0);
+  transform: translate3d(0%, 100%, 0);
+}
+
+/* End */
+
+.ui.visible.push.sidebar {
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+/*--------------
+    Uncover
+---------------*/
+
+/* Initial */
+
+.ui.uncover.sidebar {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 1;
+}
+
+/* End */
+
+.ui.visible.uncover.sidebar {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+/*--------------
+   Slide Along
+---------------*/
+
+/* Initial */
+
+.ui.slide.along.sidebar {
+  z-index: 1;
+}
+
+/* Sidebar - Initial */
+
+.ui.left.slide.along.sidebar {
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+}
+
+.ui.right.slide.along.sidebar {
+  -webkit-transform: translate3d(50%, 0, 0);
+  transform: translate3d(50%, 0, 0);
+}
+
+.ui.top.slide.along.sidebar {
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+.ui.bottom.slide.along.sidebar {
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+}
+
+/* Animation */
+
+.ui.animating.slide.along.sidebar {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+/* End */
+
+.ui.visible.slide.along.sidebar {
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+/*--------------
+   Slide Out
+---------------*/
+
+/* Initial */
+
+.ui.slide.out.sidebar {
+  z-index: 1;
+}
+
+/* Sidebar - Initial */
+
+.ui.left.slide.out.sidebar {
+  -webkit-transform: translate3d(50%, 0, 0);
+  transform: translate3d(50%, 0, 0);
+}
+
+.ui.right.slide.out.sidebar {
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+}
+
+.ui.top.slide.out.sidebar {
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+}
+
+.ui.bottom.slide.out.sidebar {
+  -webkit-transform: translate3d(0%, -50%, 0);
+  transform: translate3d(0%, -50%, 0);
+}
+
+/* Animation */
+
+.ui.animating.slide.out.sidebar {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+/* End */
+
+.ui.visible.slide.out.sidebar {
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+/*--------------
+   Scale Down
+---------------*/
+
+/* Initial */
+
+.ui.scale.down.sidebar {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  z-index: 102;
+}
+
+/* Sidebar - Initial  */
+
+.ui.left.scale.down.sidebar {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.ui.right.scale.down.sidebar {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+.ui.top.scale.down.sidebar {
+  -webkit-transform: translate3d(0%, -100%, 0);
+  transform: translate3d(0%, -100%, 0);
+}
+
+.ui.bottom.scale.down.sidebar {
+  -webkit-transform: translate3d(0%, 100%, 0);
+  transform: translate3d(0%, 100%, 0);
+}
+
+/* Pusher - Initial */
+
+.ui.scale.down.left.sidebar ~ .pusher {
+  -webkit-transform-origin: 75% 50%;
+  transform-origin: 75% 50%;
+}
+
+.ui.scale.down.right.sidebar ~ .pusher {
+  -webkit-transform-origin: 25% 50%;
+  transform-origin: 25% 50%;
+}
+
+.ui.scale.down.top.sidebar ~ .pusher {
+  -webkit-transform-origin: 50% 75%;
+  transform-origin: 50% 75%;
+}
+
+.ui.scale.down.bottom.sidebar ~ .pusher {
+  -webkit-transform-origin: 50% 25%;
+  transform-origin: 50% 25%;
+}
+
+/* Animation */
+
+.ui.animating.scale.down > .visible.ui.sidebar {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.ui.visible.scale.down.sidebar ~ .pusher,
+.ui.animating.scale.down.sidebar ~ .pusher {
+  display: block !important;
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+}
+
+/* End */
+
+.ui.visible.scale.down.sidebar {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.ui.visible.scale.down.sidebar ~ .pusher {
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
 }
 
 /*******************************

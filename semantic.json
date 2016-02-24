@@ -29,7 +29,8 @@
       "item",
       "menu",
       "segment",
-      "button"
+      "button",
+      "sidebar"
   ],
   "version": "2.1.6"
 }

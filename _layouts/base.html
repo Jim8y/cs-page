@@ -4,16 +4,17 @@
 {% include head.html %}
 
 <body>
-  <div class="ui container">
     {% include header.html %}
 
-    <div class="canvas">
-      <span></span>
-      {{ content }}
+    <div class="ui grid container">
+        <span></span>
+        {{ content }}
+        <div class="ui divider"> </div>
     </div>
 
+    <div class="ui center aligned container">
     {% include footer.html %}
-  </div>  <!-- end of content -->
+    </div>
 
 </body>
 </html>
