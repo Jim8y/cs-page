@@ -1,17 +1,43 @@
 ---
 ---
 
+div.calendar {
+	width: 64px;
+	height: 64px;
+  float: left;
 
+	background-color: #ffffff;
+  display: block;
 
-/* CSS compiled from SCSS. */
-/* --------------------------------------- */
+	header {
+		width: 64px;
+		height: 24px;
 
-// load colors first
-@import "colors";
-@import "top";
-@import "layout";
-@import "theme";
-@import "code";
-@import "article";
-@import "responsive";
-@import "show-grid";
+		background-color: #fa565a;
+
+    line-height: 24px;
+		letter-spacing: 0.5px;
+		color: #fff;
+
+		text-align: center;
+	}
+
+	section {
+		width: 64px;
+		height: 40px;
+
+    background-color: #eee;
+		position: absolute;
+    font-size: 32px;
+    line-height: 40px;
+		letter-spacing: -2px;
+		color: #4c566b;
+
+		text-align: center;
+
+		z-index: 10;
+
+	}
+}
+
+/* @end */
