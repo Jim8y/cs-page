@@ -28,10 +28,8 @@
     "divider",
     "item",
     "menu",
-    "segment",
-    "button",
-    "sidebar",
-    "image"
+    "image",
+    "header"
   ],
   "version": "2.1.8"
 }

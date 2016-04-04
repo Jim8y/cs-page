@@ -1,11 +1,3 @@
-header {
-  /*margin-top: 2rem;*/
-  /*background: black;*/
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 2rem;
-}
-
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -34,7 +26,6 @@ blockquote p {
 
 
 footer {
-  font-size: 80%;
   color: #ccc;
 }
 
