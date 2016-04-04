@@ -5,3 +5,75 @@
 	border-radius: 0;
 	margin-bottom: 2rem;
 }
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-size: 18px;
+  font-style: italic;
+  margin: 0.5em 0;
+  padding: 0.5em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+div.calendar {
+	width: 64px;
+	height: 64px;
+
+	background-color: #ffffff;
+  display: inline-block;
+
+	header {
+		width: 64px;
+		height: 24px;
+
+		background-color: #fa565a;
+
+    line-height: 24px;
+		letter-spacing: 0.5px;
+		color: #fff;
+
+		text-align: center;
+	}
+
+	section {
+		width: 64px;
+		height: 40px;
+
+    background-color: #eee;
+		// position: absolute;
+    line-height: 40px;
+		letter-spacing: -2px;
+		color: #4c566b;
+		text-align: center;
+		z-index: 10;
+
+		font-size: 32px;
+		font-weight: 300;
+	}
+}
+
+footer {
+  color: #ccc;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
