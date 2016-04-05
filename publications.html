@@ -5,6 +5,28 @@ layout: default
 
 <h1 class="ui header">Publication</h1>
 
-<p>
-{% include pub.html %}
-</p>
+<div class="ui one cards">
+  {% include publication.html
+        title="Town Crier: An Authenticated Data Feed for Smart Contracts"
+        authors="<strong>F. Zhang,</strong> E. Cecchetti, K. Croman and A. Juels and E. Shi"
+        conference="Under Submission"
+        access="ePrint"
+        url="https://eprint.iacr.org/2016/168"
+  %}
+  {% include publication.html
+        title="PlateClick: Bootstrapping Food Preferences Through an Adaptive Visual Interface."
+        authors="L. Yang, Y. Cui, <strong>F. Zhang</strong>, J.P. Pollak, S. Belongie and D. Estrin"
+        conference="In Proceedings of CIKM'15."
+        access="PDF"
+        url="http://www.cs.cornell.edu/~ylongqi/publications/YangCZPBE15.pdf"
+  %}
+</div>
+
+<!-- <ul>
+<li>
+    <strong>F. Zhang,</strong> E. Cecchetti, K. Croman and A. Juels and E. Shi,
+    <a href="https://eprint.iacr.org/2016/168">
+    Town Crier: An Authenticated Data Feed for Smart Contracts.
+    </a> Under submission. 18 February 2016
+</li>
+</ul> -->

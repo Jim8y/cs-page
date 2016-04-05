@@ -29,7 +29,8 @@
     "item",
     "menu",
     "image",
-    "header"
+    "header",
+    "card"
   ],
   "version": "2.1.8"
 }

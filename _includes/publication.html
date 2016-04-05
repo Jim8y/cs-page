@@ -1,0 +1,21 @@
+<div class="ui card publications">
+<div class="content">
+  <div class="header">
+    {{ include.title }}
+  </div>
+  <div class="description">
+    {{ include.authors }}
+  </div>
+</div>
+<div class="extra content">
+  <span>
+    {{ include.conference }}
+  </span>
+  <span class="right floated">
+    {% if include.url %}
+    <a href={{ include.url }}>
+      <i class="file pdf outline icon"></i>{{ include.access }}</a>
+    {% endif %}
+  </span>
+</div>
+</div>
