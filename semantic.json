@@ -30,7 +30,8 @@
     "menu",
     "image",
     "header",
-    "card"
+    "card",
+    "tab"
   ],
   "version": "2.1.8"
 }

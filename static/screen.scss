@@ -6,6 +6,17 @@
 	margin-bottom: 2rem;
 }
 
+.bibtexnumber {
+	padding-right: .5rem;
+}
+
+hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -39,31 +50,29 @@ div.calendar {
 	background-color: #ffffff;
   display: inline-block;
 
+	// year
 	header {
 		width: 64px;
 		height: 24px;
-
 		background-color: #fa565a;
-
     line-height: 24px;
 		letter-spacing: 0.5px;
 		color: #fff;
-
+		font-size: 1rem;
 		text-align: center;
 	}
 
+	// month
 	section {
 		width: 64px;
 		height: 40px;
 
     background-color: #eee;
-		// position: absolute;
     line-height: 40px;
 		color: #4c566b;
 		text-align: center;
 		z-index: 10;
-
-		font-size: 32px;
+		font-size: 1.5rem;
 	}
 }
 

@@ -2,63 +2,85 @@
 layout: base
 ---
 
-<div class="ui grid stackable container">
+<div class="ui tab" data-tab="home">
+  <div class="ui grid stackable container">
+    <div class="row">
+      <div class="six wide column">
+        <img class="ui medium centered image" src="static/fan.jpg">
+      </div>
 
-<div class="row">
-<div class="six wide column">
-<img class="ui medium centered image" src="static/fan.jpg">
-</div>
-
-
-<div class="ten wide column">
-
-<h1 class="ui huge header">Fan Zhang</h1>
-
-I am a second year PhD student in
-the department of
-<a href="http://cs.cornell.edu">Computer Science</a>
-at
-<a href="http://www.cornell.edu/">Cornell University</a>.
-Under the able advice of
-Prof. <a href="http://arijuels.com">Ari Juels</a>,
-my research interest spans systems security, applied cryptography,
-cryptocurrencies, trusted hardware and their intersections.
-I am a member of the exciting
-<a href="http://initc3.org/">Initiative for Cryptocurrencies & Contracts (IC3)</a>.
-Before joining Cornell, I got my bachelor's degree
-in
-<a href="http://www.tsinghua.edu.cn/publish/eeen/">Electronic Engineering</a>
-from
-<a href="http://www.tsinghua.edu.cn/publish/newthuen/index.html">Tsinghua University</a> in 2014.
-During my senior year at Tsinghua,
-I worked as a software engineer intern at Intel Open-source
-Technology Center (<a href="https://01.org/">01.org</a>) for one year.
-
-</div>
-</div>
-</div>
-
-<h2 class="ui horizontal divider header">
-  <i class="feed icon"></i>
-  <div class="content">Updates</div>
-</h2>
-
-<div class="ui text container">
-  <div class="ui items">
-  <div class="item">
-    <div class="ui image">
-      <div class="calendar"><header>2016</header><section>Feb</section></div>
-    </div>
-    <div class="content">
-      <a class="header">Town Crier</a>
-      <div class="description">
-        <p> The preprint version of our paper <em>Town Crier: An Authenticated
-          Data Feed for Smart Contracts</em> is now available at
-          <a href="https://eprint.iacr.org/2016/168">IACR ePrint</a>.
-        </p>
+      <div class="ten wide column">
+        <h1 class="ui huge header">Fan Zhang</h1>
+        I am a second year PhD student in the department of
+        <a href="http://cs.cornell.edu">Computer Science</a> at
+        <a href="http://www.cornell.edu/">Cornell University</a>. Under the able advice of Prof. <a href="http://arijuels.com">Ari Juels</a>, my research interest spans systems security, applied cryptography, cryptocurrencies, trusted hardware and their
+        intersections. I am a member of the exciting
+        <a href="http://initc3.org/">Initiative for Cryptocurrencies & Contracts (IC3)</a>. Before joining Cornell, I got my bachelor's degree in
+        <a href="http://www.tsinghua.edu.cn/publish/eeen/">Electronic Engineering</a> from
+        <a href="http://www.tsinghua.edu.cn/publish/newthuen/index.html">Tsinghua University</a> in 2014. During my senior year at Tsinghua, I worked as a software engineer intern at Intel Open-source Technology Center (<a href="https://01.org/">01.org</a>)
+        for one year.
       </div>
     </div>
   </div>
-  <!-- end of items -->
+
+  <h2 class="ui horizontal divider header">
+    <i class="feed icon"></i>
+    <div class="content">Updates</div>
+  </h2>
+
+  <div class="ui text container">
+    <div class="ui items">
+      {% include updates.html
+        year='2016'
+        month='Apr'
+        header='Paper Accepted to Security\'16'
+        description='<em>Stealing Machine Learning Models via Prediction APIs</em> is accepted to USENIX Security\'16'
+      %}
+      {% include updates.html
+        year='2016'
+        month='Feb'
+        header='Town Crier'
+        description='The preprint version of <em>Town Crier: An Authenticated Data Feed for Smart Contracts</em> is now available at
+                    <a href="https://eprint.iacr.org/2016/168">IACR ePrint</a>.'
+      %}
+      <!-- end of items -->
+    </div>
   </div>
-</div>
+</div> <!-- end of home tab -->
+
+<div class="ui tab" data-tab="research">
+  <div class="ui text container">
+    <h1 class="ui header">Research Projects</h1>
+    <p> Comming soon :) </p>
+  </div>
+</div> <!-- end of research tab -->
+
+<div class="ui tab" data-tab="experience">
+  <div class="ui text container">
+    <h1 class="ui header">Teaching</h1>
+    <ul>
+      <li> 2015 Fall, (Part Time) TA for <a href="http://www.arijuels.com/teaching/cs-5435-fall-2015">CS 5435: Security and Privacy in the Wild</a></li>
+      <li> 2015 Spring, TA for CS 5300: Large-scale Information Systems </li>
+      <li> 2014 Fall, TA for CS 4410: Operating Systems </li>
+    </ul>
+  </div>
+</div> <!-- end of expr tab -->
+
+<div class="ui tab" data-tab="publications">
+  <div class="ui text container">
+    <h1 class="ui header">Publication</h1>
+    {% include fan.html %}
+    </div>
+  </div>
+</div> <!-- end of publication tab -->
+
+<div class="ui tab" data-tab="contact">
+  <div class="ui text container">
+    <h1 class="ui header">Contact</h1>
+    <ul>
+      <li><i class="at icon"></i>fanz at cs.cornell.edu</li>
+      <li><i class="mail icon"></i>Gates Hall 445, Cornell University, Ithaca, NY 14850</li>
+      <li><i class="calendar icon"></i><a href="https://fanz.youcanbook.me">youcanbook.me</a></li>
+    </ul>
+  </div>
+</div> <!-- end of contact -->

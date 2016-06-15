@@ -142,14 +142,14 @@
 .ui.items > .item > .content > .header {
   display: inline-block;
   margin: -0.21425em 0em 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'BenchNine';
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
 }
 
 /* Default Header Size */
 .ui.items > .item > .content > .header:not(.ui) {
-  font-size: 1.28571429em;
+  font-size: 1.3125em;
 }
 
 /*--------------
@@ -185,7 +185,7 @@
 ---------------*/
 
 .ui.items > .item > .content > .description {
-  margin-top: 0.6em;
+  margin-top: 0;
   max-width: auto;
   font-size: 1em;
   line-height: 1.4285em;

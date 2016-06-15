@@ -8,22 +8,12 @@
 # Site settings
 title: Fan Zhang
 email: bl4ck5unxx@gmail.com
-description: Fan's webpage
+description: Fan's Webpage
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-github_username:  bl4ck5un
 
 exclude: [compass, semantic, semantic.json, node_modules]
 # Build settings
-markdown: redcarpet
 excerpt_separator: "\n\n"
 highlighter: rouge
 
-redcarpet:
-  extensions:
-    - fenced_code_blocks
-    - autolink
-    - no_intra_emphasis
-    - with_toc_data
-    - tables
-gem: [compass, redcarpet]
+gem: [compass]
