@@ -53,22 +53,22 @@ div.calendar {
 	// year
 	header {
 		width: 64px;
-		height: 24px;
+		height: 28px;
 		background-color: #fa565a;
-    line-height: 24px;
+    line-height: 28px;
 		letter-spacing: 0.5px;
 		color: #fff;
-		font-size: 1rem;
+		// font-size: 1rem;
 		text-align: center;
 	}
 
 	// month
 	section {
 		width: 64px;
-		height: 40px;
+		height: 36px;
 
     background-color: #eee;
-    line-height: 40px;
+    line-height: 36px;
 		color: #4c566b;
 		text-align: center;
 		z-index: 10;
