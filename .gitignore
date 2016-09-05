@@ -3,3 +3,11 @@ _site
 .jekyll-metadata
 .DS_Store
 node_modules
+
+static/sui
+
+semantic/*
+!semantic/src
+
+semantic/src/*
+!semantic/src/site
