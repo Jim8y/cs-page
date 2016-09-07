@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <script src="static/jquery-1.12.1.min.js"></script>
+  
+  <link rel="stylesheet" href="static/sui/semantic.css">
+  <script src="static/sui/semantic.js"></script>
+  <link rel="stylesheet" href="static/screen.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72748416-3', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <title>
+    {% block title %} Fan Zhang {% endblock %}
+  </title>
+</head>
+<html>
+
+<body>
+  <div class="ui text main container">
+      {% block content %} {% endblock %}
+  </div>
+
+  <h5 class="ui horizontal divider header"><i class="grey bug icon"></i></h5>
+  <div class="ui center aligned main container">
+    <footer>
+        <div>Copyright &copy 2014-2016 <a href="mailto:bl4ck5unxx@gmail.com">Fan Zhang</a> </div>
+        <div><a href="about.html">License & Acknowledgements</a></div>
+        <div>Last updated at {{ time }} </div>
+    </footer>
+  </div>
+</body>
+</html>

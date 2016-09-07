@@ -1,0 +1,3 @@
+    {% include updates.html year='2016' month='July' header='Paper Accepted to CCS\'16' description='
+    <em>Town Crier: An Authenticated Data Feed for Smart Contracts</em> is accepted to ACM CCS\'16' %} {% include updates.html year='2016' month='Apr' header='Paper Accepted to Security\'16' description='
+    <em>Stealing Machine Learning Models via Prediction APIs</em> is accepted to USENIX Security\'16' %}

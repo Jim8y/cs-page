@@ -1,6 +1,7 @@
----
-layout: base
----
+{% extends "base.html" %}
+
+{% block content %}
+
 
 <div class="ui stackable grid">
     <div class="row">
@@ -32,10 +33,20 @@ layout: base
 <h1 class="ui header"> <div class="content">Updates</div> </h1>
 
 <div class="ui items">
-    {% include updates.html year='2016' month='July' header='Paper Accepted to CCS\'16' description='
-    <em>Town Crier: An Authenticated Data Feed for Smart Contracts</em> is accepted to ACM CCS\'16' %} {% include updates.html year='2016' month='Apr' header='Paper Accepted to Security\'16' description='
-    <em>Stealing Machine Learning Models via Prediction APIs</em> is accepted to USENIX Security\'16' %}
-    <!-- end of items -->
+  {% for u in updates %}
+    <div class="item">
+      <div class="content">
+        <div class="ui left floated image">
+          <div class="calendar">
+            <header>{{ u.year }}</header>
+            <section>{{ u.month }}</section>
+          </div>
+        </div>
+        <a class="header">{{ u.header }}</a>
+        <div class="description">{{ u.content }}</div>
+      </div>
+    </div>
+  {% endfor %}
 </div>
 
 <h1 class="ui header"> Teaching </h1>
@@ -45,7 +56,22 @@ layout: base
     <li> 2014 Fall, TA for CS 4410: Operating Systems </li>
 </ul>
 
-<h1 class="ui header"> Publications </h1> {% include fan.html %}
+<h1 class="ui header"> Publications </h1>
+<ul>
+{% for p in publications %}
+<li>
+  {% if p.ENTRYTYPE == 'misc' %} <div class="ui yellow label"> Manuscript </div> {% endif %}
+  {% if p.ENTRYTYPE == 'inproceedings' %} <div class="ui green label"> In Proceedings</div> {% endif %}
+  {{ p.author }}. <em>{{ p.title }}</em>. In
+  {% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}{% if p.pages %}, {{ p.pages }} {% endif %}
+  .
+  {% if p.link %} [<a href="{{ p.link }}">URL</a>] {% endif %}
+  {% if p.note %} [<a href="{{ p.note }}">URL</a>] {% endif %}
+  {% if p.pdf %} [<a href="{{ p.pdf }}">PDF</a>] {% endif %}
+</li>
+{% endfor %}
+</ul>
+
 
 <h1 class="ui header"> Contact </h1>
 <ul>
@@ -53,3 +79,5 @@ layout: base
     <li><i class="mail icon"></i>Gates Hall 445, Cornell University, Ithaca, NY 14850</li>
     <li><i class="calendar icon"></i><a href="https://fanz.youcanbook.me">youcanbook.me</a></li>
 </ul>
+
+{% endblock %}
