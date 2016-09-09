@@ -2,5 +2,5 @@ pushd semantic
 gulp build
 popd
 
-jekyll b
+python main.py
 rsync -avh --delete output/ fanz@lion.cs.cornell.edu:/home/WIN/fanz/MyWeb/
