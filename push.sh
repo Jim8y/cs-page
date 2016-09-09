@@ -3,4 +3,4 @@ gulp build
 popd
 
 jekyll b
-rsync -avh --delete _site/ fanz@lion.cs.cornell.edu:/home/WIN/fanz/MyWeb/
+rsync -avh --delete output/ fanz@lion.cs.cornell.edu:/home/WIN/fanz/MyWeb/

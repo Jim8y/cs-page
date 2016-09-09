@@ -10,6 +10,8 @@ import copy
 from os.path import exists
 import shutil
 
+import time
+
 
 CWD = os.path.dirname(__file__)
 OUTPUT_DIR = os.path.join(CWD, 'output')
@@ -24,9 +26,12 @@ class Engine (object):
     def __init__(self, deploy=False):
         if deploy:
             SITE_ROOT='http://www.initc3.org'
-            self.def_cntx = dict(SITE_ROOT=SITE_ROOT)
+            self.def_cntx = dict(
+                    SITE_ROOT=SITE_ROOT,
+                    now=time.strftime("%d/%m/%Y"))
         else:
-            self.def_cntx = dict(SITE_ROOT=OUTPUT_DIR)
+            self.def_cntx = dict(SITE_ROOT=OUTPUT_DIR,
+                    now=time.strftime("%d/%m/%Y"))
         print 'deploy: ' + str(deploy)
         if exists(OUTPUT_DIR):
             shutil.rmtree(OUTPUT_DIR)
