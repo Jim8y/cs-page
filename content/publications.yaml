@@ -1,14 +1,13 @@
 title: 'Sealed-glass proofs: Using transparent enclaves to prove and sell knowledge'
 authors: Florian Tramer, Fan Zhang, Huang Lin, Jean-Pierre Hubaux, Ari Juels, and Elaine Shi
-type: eprint
-venue: Cryptology ePrint Archive, Report 2016/635, 2016
+venue: EuroS&P'16. To appaer.
 url: http://eprint.iacr.org/2016/635
 pdf: http://eprint.iacr.org/2016/635.pdf
 bibtex: http://eprint.iacr.org/eprint-bin/cite.pl?entry=2016/635
 ---
 title: 'Town Crier: An Authenticated Data Feed for Smart Contracts'
 authors: Fan Zhang, Ethan Cecchetti, Kyle Croman, Ari Juels, and Elaine Shi
-venue: CCS'16. To appear
+venue: CCS'16. 
 url: http://eprint.iacr.org/2016/635
 pdf: files/pubs/towncrier-ccs16-final.pdf
 bibtex: http://eprint.iacr.org/2016/635
