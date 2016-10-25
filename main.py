@@ -53,6 +53,12 @@ def index():
     updates = [
         dict(
             year=2016,
+            month='Oct',
+            header="Paper Accepted to EuroS&P'16",
+            content="Sealed-Glass Proofs: Using Transparent Enclaves to Prove and Sell Knowledge",
+            ),
+        dict(
+            year=2016,
             month='Jul',
             header="Paper Accepted to CCS'16",
             content="Town Crier: An Authenticated Data Feed for Smart Contracts is accepted to ACM CCS'16"
