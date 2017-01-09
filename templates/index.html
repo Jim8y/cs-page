@@ -10,8 +10,8 @@
             <div class="image"> <img src="static/fan.jpg"> </div>
             <div class="content">
               <a href="http://github.com/bl4ck5un"><i class="bordered link github icon"></i></a>
-              <a href="mailto:bl4ck5unxx@gmail.com"> <i class="bordered link mail icon"></i> </a>
-              <i class="bordered linkedin icon"></i>
+              <a href="mailto:bl4ck5unxx@gmail.com"><i class="bordered link mail icon"></i></a>
+              <a href="http://www.linkedin.com/in/fanz92"><i class="bordered linkedin icon"></i></a>
               <i class="bordered motorcycle icon"></i>
             </div>
           </div>
@@ -61,13 +61,13 @@
 {% for p in publications %}
 <li>
   {% if p.ENTRYTYPE == 'misc' %} <div class="ui yellow label"> Manuscript </div> {% endif %}
-  {% if p.ENTRYTYPE == 'inproceedings' %} <div class="ui green label"> In Proceedings</div> {% endif %}
   {{ p.author }}. <em>{{ p.title }}</em>. In
   {% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}{% if p.pages %}, {{ p.pages }} {% endif %}
   .
-  {% if p.link %} [<a href="{{ p.link }}">URL</a>] {% endif %}
-  {% if p.note %} [<a href="{{ p.note }}">URL</a>] {% endif %}
-  {% if p.pdf %} [<a href="{{ p.pdf }}">PDF</a>] {% endif %}
+  {% if p.bibtexfile %} <a href="{{ p.bibtexfile }}">BibTeX</a>,{% endif %}
+  {% if p.link %} <a href="{{ p.link }}"><i class="linkify icon"></i>URL</a>,{% endif %}
+  {% if p.pdf %} <a href="{{ p.pdf }}"><i class="file pdf outline icon"></i>PDF</a>,{% endif %}
+  {% if p.ppt %} <a href="{{ p.ppt }}"><i class="file powerpoint outline icon"></i>PPT</a>.{% endif %}
 </li>
 {% endfor %}
 </ul>
@@ -76,6 +76,7 @@
 <h1 class="ui header"> Contact </h1>
 <ul>
     <li><i class="at icon"></i>fanz at cs.cornell.edu</li>
+    <li><i class="file pdf outline icon"></i><a href="files/cv_latest.pdf">CV</a></li>
     <li><i class="mail icon"></i>Gates Hall 445, Cornell University, Ithaca, NY 14850</li>
     <li><i class="calendar icon"></i><a href="https://fanz.youcanbook.me">youcanbook.me</a></li>
 </ul>

@@ -42,7 +42,6 @@ def index():
         pubs = yaml.load_all(c)
         pubs = list(pubs)
 
-
     with open('content/fan.bib') as bfile:
         bib = bfile.read()
 
@@ -54,7 +53,7 @@ def index():
         dict(
             year=2016,
             month='Oct',
-            header="Paper Accepted to EuroS&P'16",
+            header="Paper Accepted to EuroS&P'17",
             content="Sealed-Glass Proofs: Using Transparent Enclaves to Prove and Sell Knowledge",
             ),
         dict(
