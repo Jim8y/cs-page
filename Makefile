@@ -15,5 +15,3 @@ deploy-cornell: website
 
 deploy-s3: website
 	aws s3 sync output/ s3://www.fanzhang.me 
-
-
