@@ -64,10 +64,13 @@
   {{ p.author }}. <em>{{ p.title }}</em>. In
   {% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}{% if p.pages %}, {{ p.pages }} {% endif %}
   .
-  {% if p.bibtexfile %} <a href="{{ p.bibtexfile }}">BibTeX</a>,{% endif %}
-  {% if p.link %} <a href="{{ p.link }}"><i class="linkify icon"></i>URL</a>,{% endif %}
-  {% if p.pdf %} <a href="{{ p.pdf }}"><i class="file pdf outline icon"></i>PDF</a>,{% endif %}
-  {% if p.ppt %} <a href="{{ p.ppt }}"><i class="file powerpoint outline icon"></i>PPT</a>.{% endif %}
+
+  <div class="ui small labels">
+  {% if p.bibtexfile %} <a class="ui label" href="{{ p.bibtexfile }}">BibTeX</a>{% endif %}
+  {% if p.link %} <a class="ui label" href="{{ p.link }}"><i class="linkify icon"></i>Link</a>{% endif %}
+  {% if p.pdf %} <a class="ui label" href="{{ p.pdf }}"><i class="file pdf outline icon"></i>PDF</a>{% endif %}
+  {% if p.ppt %} <a class="ui label" href="{{ p.ppt }}"><i class="file powerpoint outline icon"></i>PPT</a>{% endif %}
+  </div>
 </li>
 {% endfor %}
 </ul>
