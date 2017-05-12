@@ -51,9 +51,15 @@ def index():
     updates = [
         dict(
             year=2017,
+            month='May',
+            header="REM is accepted to USENIX Security'17",
+            content="Our paper on resource efficient mining is accepted to Security'17. The paper is available at <a href=\"http://www.initc3.org/files/rem.pdf\">here</a>.",
+            ),
+        dict(
+            year=2017,
             month='Apr',
             header="Solidus Paper is Online",
-            content="Solidus: Confidential Distributed Ledger Transactions via PVORM is now available on <a href=\"http://ia.cr/2017/317\">ePrint</a>.",
+            content="Solidus: Confidential Distributed Ledger Transactions via PVORM is now available at <a href=\"http://ia.cr/2017/317\">ePrint</a>.",
             ),
         dict(
             year=2016,
