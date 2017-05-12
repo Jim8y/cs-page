@@ -4,8 +4,6 @@ _site
 .DS_Store
 node_modules
 
-static/sui
-
 semantic/*
 !semantic/src
 
