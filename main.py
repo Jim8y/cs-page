@@ -12,8 +12,10 @@ from optparse import OptionParser
 import bibtexparser
 
 parser = OptionParser()
-parser.add_option("-d", "--deploy", action="store_true", dest="deploy", default=False)
-parser.add_option("-f", "--fetchall", action="store_true", dest="fetchall", default=False)
+parser.add_option("-d", "--deploy", action="store_true",
+                  dest="deploy", default=False)
+parser.add_option("-f", "--fetchall", action="store_true",
+                  dest="fetchall", default=False)
 (options, args) = parser.parse_args()
 
 CWD = os.path.dirname(__file__)
@@ -24,14 +26,16 @@ e = Engine(deploy=options.deploy)
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.customization import *
 
+
 def customizations(record):
     authors = record['author']
     count = authors.count('and') - 1
     authors = authors.replace(' and', ',', count)
     record['author'] = authors
 
-    record['title'] = record['title'].replace('{','').replace('}','')
+    record['title'] = record['title'].replace('{', '').replace('}', '')
     return record
+
 
 def index():
     temp = e.env.get_template('index.html')
@@ -52,38 +56,46 @@ def index():
         dict(
             year=2017,
             month='May',
+            header="Town Crier goes live!",
+            content="Our SGX-based authenticated data feed -- Town Crier -- is officially live.\
+                    Start getting trustworthy data into your smart contracts now! Read on \
+                    <a href=\"http://www.town-crier.org/get-started.html\">here</a>.",
+        ),
+        dict(
+            year=2017,
+            month='May',
             header="REM is accepted to USENIX Security'17",
             content="Our paper on resource efficient mining is accepted to Security'17. The paper is available at <a href=\"http://www.initc3.org/files/rem.pdf\">here</a>.",
-            ),
+        ),
         dict(
             year=2017,
             month='Apr',
             header="Solidus Paper is Online",
             content="Solidus: Confidential Distributed Ledger Transactions via PVORM is now available at <a href=\"http://ia.cr/2017/317\">ePrint</a>.",
-            ),
+        ),
         dict(
             year=2016,
             month='Oct',
             header="Paper Accepted to EuroS&P '17",
             content="Sealed-Glass Proofs: Using Transparent Enclaves to Prove and Sell Knowledge is accepted to EuroS&P '17.",
-            ),
+        ),
         dict(
             year=2016,
             month='Jul',
             header="Paper Accepted to CCS'16",
             content="Town Crier: An Authenticated Data Feed for Smart Contracts is accepted to ACM CCS'16."
-            ),
+        ),
         dict(
             year=2016,
             month='Apr',
             header="Paper Accepted to Security'16",
             content="Stealing Machine Learning Models via Prediction APIs is accepted to USENIX Security'16.",
-            )
-        ]
+        )
+    ]
 
     e.render_and_write(temp,
-            dict(publications=bib.entries, updates=updates),
-            output_fn)
+                       dict(publications=bib.entries, updates=updates),
+                       output_fn)
 
 
 def page_not_found():

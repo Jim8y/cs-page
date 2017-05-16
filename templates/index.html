@@ -48,13 +48,6 @@
   {% endfor %}
 </div>
 
-<h1 class="ui header"> Teaching </h1>
-<ul>
-    <li> 2015 Fall, (Part Time) TA for <a href="http://www.arijuels.com/teaching/cs-5435-fall-2015">CS 5435: Security and Privacy in the Wild</a></li>
-    <li> 2015 Spring, TA for CS 5300: Large-scale Information Systems </li>
-    <li> 2014 Fall, TA for CS 4410: Operating Systems </li>
-</ul>
-
 <h1 class="ui header"> Publications </h1>
 <ul>
 {% for p in publications %}
@@ -74,6 +67,27 @@
 {% endfor %}
 </ul>
 
+{% macro star(repo) %}
+  <a class="github-button" href="https://github.com/{{ repo }}" data-show-count="true" aria-label="Star {{ repo }} on GitHub">Star</a>
+{% endmacro %}
+
+<h1>Software</h1>
+
+I'm enthusiastic about open-source software and trying earnestly to contribute to greater communities.
+Consider following me on GitHub <a class="github-button" href="https://github.com/bl4ck5un" aria-label="Follow @bl4ck5un on GitHub">Follow @bl4ck5un</a>.
+
+<ul>
+<li><b>Town Crier</b>{{ star("bl4ck5un/town-crier") }}: an SGX-based authenticated data feeds for smart contracts. </li>
+<li><b>mbedTLS-SGX</b>{{ star("bl4ck5un/mbedtls-sgx") }}: a port of mbedtls to be used as an SGX library. </li>
+<li><b>hybrid-enc</b>{{ star("bl4ck5un/hybrid-enc") }}: ECDH + AES-256 encryption based on mbedtls.</li>
+</ul>
+
+<h1 class="ui header"> Teaching </h1>
+<ul>
+    <li> 2015 Fall, (Part Time) TA for <a href="http://www.arijuels.com/teaching/cs-5435-fall-2015">CS 5435: Security and Privacy in the Wild</a></li>
+    <li> 2015 Spring, TA for CS 5300: Large-scale Information Systems </li>
+    <li> 2014 Fall, TA for CS 4410: Operating Systems </li>
+</ul>
 
 <h1 class="ui header"> Contact </h1>
 <ul>
