@@ -1,27 +1,25 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 
 <div class="ui stackable grid">
     <div class="row">
         <div class="six wide column">
-          <div class="ui name card">
-            <div class="image"> <img src="static/fan.jpg"> </div>
-            <div class="content">
-              <a href="http://github.com/bl4ck5un"><i class="bordered link github icon"></i></a>
-              <a href="mailto:bl4ck5unxx@gmail.com"><i class="bordered link mail icon"></i></a>
-              <a href="http://www.linkedin.com/in/fanz92"><i class="bordered linkedin icon"></i></a>
-              <i class="bordered motorcycle icon"></i>
+            <div class="ui name card">
+                <div class="image"> <img src="static/fan.jpg"> </div>
+                <div class="content">
+                    <a href="http://github.com/bl4ck5un"><i class="bordered link github icon"></i></a>
+                    <a href="mailto:bl4ck5unxx@gmail.com"><i class="bordered link mail icon"></i></a>
+                    <a href="http://www.linkedin.com/in/fanz92"><i class="bordered linkedin icon"></i></a>
+                    <i class="bordered motorcycle icon"></i>
+                </div>
             </div>
-          </div>
         </div>
 
         <div class="ten wide column">
             <h1 class="ui header">Fan Zhang</h1> I am a third year PhD student in the department of
             <a href="http://cs.cornell.edu">Computer Science</a> at
-            <a href="http://www.cornell.edu/">Cornell University</a>. Under the able advice of Prof. <a href="http://arijuels.com">Ari Juels</a>, my research interest spans systems security, applied cryptography, cryptocurrencies, trusted hardware
-            and their intersections. I am a member of the exciting
+            <a href="http://www.cornell.edu/">Cornell University</a>. Under the able advice of Prof. <a href="http://arijuels.com">Ari Juels</a>, my research interest spans systems security, applied cryptography, cryptocurrencies, trusted hardware and
+            their intersections. I am a member of the exciting
             <a href="http://initc3.org/">Initiative for Cryptocurrencies & Contracts (IC3)</a>. Before joining Cornell, I got my bachelor's degree in
             <a href="http://www.tsinghua.edu.cn/publish/eeen/">Electronic Engineering</a> from
             <a href="http://www.tsinghua.edu.cn/publish/newthuen/index.html">Tsinghua University</a> in 2014.
@@ -32,54 +30,46 @@
 <h1 class="ui header"> <div class="content">Updates</div> </h1>
 
 <div class="ui items">
-  {% for u in updates %}
+    {% for u in updates %}
     <div class="item">
-      <div class="content">
-        <div class="ui left floated image">
-          <div class="calendar">
-            <header>{{ u.year }}</header>
-            <section>{{ u.month }}</section>
-          </div>
+        <div class="content">
+            <div class="ui left floated image">
+                <div class="calendar">
+                    <header>{{ u.year }}</header>
+                    <section>{{ u.month }}</section>
+                </div>
+            </div>
+            <a class="header">{{ u.header }}</a>
+            <div class="description">{{ u.content }}</div>
         </div>
-        <a class="header">{{ u.header }}</a>
-        <div class="description">{{ u.content }}</div>
-      </div>
     </div>
-  {% endfor %}
+    {% endfor %}
 </div>
 
 <h1 class="ui header"> Publications </h1>
 <ul>
-{% for p in publications %}
-<li>
-  {% if p.ENTRYTYPE == 'misc' %} <div class="ui yellow label"> Manuscript </div> {% endif %}
-  {{ p.author }}. <em>{{ p.title }}</em>. In
-  {% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}{% if p.pages %}, {{ p.pages }} {% endif %}
-  .
+    {% for p in publications %}
+    <li>
+        {% if p.ENTRYTYPE == 'misc' %}
+        <div class="ui yellow label"> Manuscript </div> {% endif %} {{ p.author }}. <em>{{ p.title }}</em>. In {% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}{% if p.pages %}, {{ p.pages }} {% endif %} .
 
-  <div class="ui small labels">
-  {% if p.bibtexfile %} <a class="ui label" href="{{ p.bibtexfile }}">BibTeX</a>{% endif %}
-  {% if p.link %} <a class="ui label" href="{{ p.link }}"><i class="linkify icon"></i>Link</a>{% endif %}
-  {% if p.pdf %} <a class="ui label" href="{{ p.pdf }}"><i class="file pdf outline icon"></i>PDF</a>{% endif %}
-  {% if p.ppt %} <a class="ui label" href="{{ p.ppt }}"><i class="file powerpoint outline icon"></i>PPT</a>{% endif %}
-  </div>
-</li>
-{% endfor %}
+        <div class="ui small labels">
+            {% if p.bibtexfile %} <a class="ui label" href="{{ p.bibtexfile }}">BibTeX</a>{% endif %} {% if p.link %} <a class="ui label" href="{{ p.link }}"><i class="linkify icon"></i>Link</a>{% endif %} {% if p.pdf %}
+            <a class="ui label" href="{{ p.pdf }}"><i class="file pdf outline icon"></i>PDF</a>{% endif %} {% if p.ppt %} <a class="ui label" href="{{ p.ppt }}"><i class="file powerpoint outline icon"></i>PPT</a>{% endif %}
+        </div>
+    </li>
+    {% endfor %}
 </ul>
 
 {% macro star(repo) %}
-  <a class="github-button" href="https://github.com/{{ repo }}" data-show-count="true" aria-label="Star {{ repo }} on GitHub">Star</a>
-{% endmacro %}
+<a class="github-button" href="https://github.com/{{ repo }}" data-show-count="true" aria-label="Star {{ repo }} on GitHub">Star</a> {% endmacro %}
 
-<h1>Software</h1>
-
-I'm enthusiastic about open-source software and trying earnestly to contribute to greater communities.
-Consider following me on GitHub <a class="github-button" href="https://github.com/bl4ck5un" aria-label="Follow @bl4ck5un on GitHub">Follow @bl4ck5un</a>.
+<h1>Software</h1> I'm enthusiastic about open-source software and trying earnestly to contribute to greater communities. Consider following me on GitHub <a class="github-button" href="https://github.com/bl4ck5un" aria-label="Follow @bl4ck5un on GitHub">Follow @bl4ck5un</a>.
 
 <ul>
-<li><b>Town Crier</b>{{ star("bl4ck5un/town-crier") }}: an SGX-based authenticated data feeds for smart contracts. </li>
-<li><b>mbedTLS-SGX</b>{{ star("bl4ck5un/mbedtls-sgx") }}: a port of mbedtls to be used as an SGX library. </li>
-<li><b>hybrid-enc</b>{{ star("bl4ck5un/hybrid-enc") }}: ECDH + AES-256 encryption based on mbedtls.</li>
+    <li><b>Town Crier</b>{{ star("bl4ck5un/town-crier") }}: an SGX-based authenticated data feeds for smart contracts. </li>
+    <li><b>mbedTLS-SGX</b>{{ star("bl4ck5un/mbedtls-sgx") }}: a port of mbedtls to be used as an SGX library. </li>
+    <li><b>hybrid-enc</b>{{ star("bl4ck5un/hybrid-enc") }}: ECDH + AES-256 encryption based on mbedtls.</li>
 </ul>
 
 <h1 class="ui header"> Teaching </h1>
