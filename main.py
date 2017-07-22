@@ -11,17 +11,10 @@ from base import Engine
 from optparse import OptionParser
 import bibtexparser
 
-parser = OptionParser()
-parser.add_option("-d", "--deploy", action="store_true",
-                  dest="deploy", default=False)
-parser.add_option("-f", "--fetchall", action="store_true",
-                  dest="fetchall", default=False)
-(options, args) = parser.parse_args()
-
 CWD = os.path.dirname(__file__)
 OUTPUT_DIR = os.path.join(CWD, 'output')
 
-e = Engine(deploy=options.deploy)
+e = Engine()
 
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.customization import *

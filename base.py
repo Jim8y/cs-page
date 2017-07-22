@@ -23,16 +23,8 @@ class Engine (object):
     env = Environment(loader=FileSystemLoader('templates'))
     output_dir = OUTPUT_DIR
 
-    def __init__(self, deploy=False):
-        if deploy:
-            SITE_ROOT='http://www.initc3.org'
-            self.def_cntx = dict(
-                    SITE_ROOT=SITE_ROOT,
-                    now=time.strftime("%d/%m/%Y"))
-        else:
-            self.def_cntx = dict(SITE_ROOT=OUTPUT_DIR,
-                    now=time.strftime("%d/%m/%Y"))
-        print 'deploy: ' + str(deploy)
+    def __init__(self):
+        self.def_cntx = dict(SITE_ROOT=OUTPUT_DIR, now=time.strftime("%d/%m/%Y"))
         if exists(OUTPUT_DIR):
             shutil.rmtree(OUTPUT_DIR)
         os.mkdir(OUTPUT_DIR)
