@@ -50,8 +50,11 @@
 <ul>
     {% for p in publications %}
     <li>
-        {% if p.ENTRYTYPE == 'misc' %}
-        <div class="ui yellow label"> Manuscript </div> {% endif %} {{ p.author }}. <em>{{ p.title }}</em>. In {% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}{% if p.pages %}, {{ p.pages }} {% endif %} .
+        {% if p.ENTRYTYPE == 'misc' %}<div class="ui yellow label"> Manuscript </div> {% endif %}
+        {{ p.author }}. <em>{{ p.title }}</em>.
+
+        In
+          {% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}{% if p.pages %}, {{ p.pages }}{% endif %}.
 
         <div class="ui small labels">
             {% if p.bibtexfile %} <a class="ui label" href="{{ p.bibtexfile }}">BibTeX</a>{% endif %} {% if p.link %} <a class="ui label" href="{{ p.link }}"><i class="linkify icon"></i>Link</a>{% endif %} {% if p.pdf %}
@@ -62,7 +65,8 @@
 </ul>
 
 {% macro star(repo) %}
-<a class="github-button" href="https://github.com/{{ repo }}" data-show-count="true" aria-label="Star {{ repo }} on GitHub">Star</a> {% endmacro %}
+<a class="github-button" href="https://github.com/{{ repo }}" data-show-count="true" aria-label="Star {{ repo }} on GitHub">Star</a>
+{% endmacro %}
 
 <h1>Software</h1> I'm enthusiastic about open-source software and trying earnestly to contribute to greater communities. Consider following me on GitHub <a class="github-button" href="https://github.com/bl4ck5un" aria-label="Follow @bl4ck5un on GitHub">Follow @bl4ck5un</a>.
 
