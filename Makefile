@@ -8,7 +8,7 @@ website:
 compress:
 	chmod u+x compress.sh && ./compress.sh
 
-deploy-cornell: website compress
+deploy-cornell: website
 	rsync -avh --delete output/ fanz@lion.cs.cornell.edu:/home/WIN/fanz/MyWeb/
 
 deploy-s3: website compress
