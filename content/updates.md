@@ -1,2 +1,0 @@
-- Town Crier is accepted to **ACM CCS 2016**
-- Steal ML paper is accepted to **USENIX Security'16**

@@ -24,7 +24,7 @@
   display: -ms-flexbox;
   display: flex;
   margin: 1rem 0em;
-  font-family: 'Average', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: #FFFFFF;
   font-weight: normal;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -789,6 +789,7 @@ Floated Menu / Item
 /* Item */
 .ui.secondary.menu .item {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   box-shadow: none;
   border: none;
@@ -1032,6 +1033,7 @@ Floated Menu / Item
   border-radius: 0px;
   box-shadow: none;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   margin: 0em 0em;
   padding: 0.35714286em 0.5em;
@@ -1263,6 +1265,13 @@ Floated Menu / Item
   .ui.stackable.menu .right.menu,
   .ui.stackable.menu .right.item {
     margin-left: 0 !important;
+  }
+  .ui.stackable.menu .right.menu,
+  .ui.stackable.menu .left.menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1680,6 +1689,9 @@ Floated Menu / Item
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.ui.attached.item.menu {
+  margin: 0em -1px !important;
 }
 .ui.item.menu .item:last-child:before {
   display: none;

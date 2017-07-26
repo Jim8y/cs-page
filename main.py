@@ -1,15 +1,15 @@
 # encoding: utf-8
 
-import yaml
-from jinja2 import FileSystemLoader, Environment
+import datetime
 import os
-import codecs
-import markdown
-from os.path import join, exists
-from base import Engine
+from os.path import join
 
-from optparse import OptionParser
 import bibtexparser
+import markdown
+import yaml
+from dateutil import parser as dtparser
+
+from base import Engine
 
 CWD = os.path.dirname(__file__)
 OUTPUT_DIR = os.path.join(CWD, 'output')
@@ -17,7 +17,6 @@ OUTPUT_DIR = os.path.join(CWD, 'output')
 e = Engine()
 
 from bibtexparser.bparser import BibTexParser
-from bibtexparser.customization import *
 
 
 def customizations(record):
@@ -34,60 +33,51 @@ def index():
     temp = e.env.get_template('index.html')
     output_fn = e.get_root_fn('index.html')
 
-    with open('content/publications.yaml', 'r') as c:
-        pubs = yaml.load_all(c)
-        pubs = list(pubs)
-
     with open('content/fan.bib') as bfile:
         bib = bfile.read()
+
+    with open('content/bio.md') as bio_md:
+        bio = markdown.markdown(bio_md.read())
 
     bibparser = BibTexParser()
     bibparser.customization = customizations
     bib = bibtexparser.loads(bib, parser=bibparser)
 
-    updates = [
-        dict(
-            year=2017,
-            month='May',
-            header="Town Crier goes live!",
-            content="Our SGX-based authenticated data feed -- Town Crier -- is officially live.\
-                    Start getting trustworthy data into your smart contracts now! Read on \
-                    <a href=\"http://www.town-crier.org/get-started.html\">here</a>.",
-        ),
-        dict(
-            year=2017,
-            month='May',
-            header="REM is accepted to USENIX Security'17",
-            content="Our paper on resource efficient mining is accepted to Security'17. The paper is available at <a href=\"http://www.initc3.org/files/rem.pdf\">here</a>.",
-        ),
-        dict(
-            year=2017,
-            month='Apr',
-            header="Solidus Paper is Online",
-            content="Solidus: Confidential Distributed Ledger Transactions via PVORM is now available at <a href=\"http://ia.cr/2017/317\">ePrint</a>.",
-        ),
-        dict(
-            year=2016,
-            month='Oct',
-            header="Paper Accepted to EuroS&P '17",
-            content="Sealed-Glass Proofs: Using Transparent Enclaves to Prove and Sell Knowledge is accepted to EuroS&P '17.",
-        ),
-        dict(
-            year=2016,
-            month='Jul',
-            header="Paper Accepted to CCS'16",
-            content="Town Crier: An Authenticated Data Feed for Smart Contracts is accepted to ACM CCS'16."
-        ),
-        dict(
-            year=2016,
-            month='Apr',
-            header="Paper Accepted to Security'16",
-            content="Stealing Machine Learning Models via Prediction APIs is accepted to USENIX Security'16.",
-        )
-    ]
+    def md_and_strip(md):
+        if not md:
+            return None
+        # parse markdown and rip off the outer <p>
+        text = markdown.markdown(md)
+        from pyquery import PyQuery as pq
+        return pq(text)('p').html()
+
+    with open('content/updates.yaml', 'r') as updates_yaml:
+        try:
+            updates = yaml.load(updates_yaml)
+            for u in updates:
+                if not isinstance(u['date'], datetime.date):
+                    u['date'] = dtparser.parse(u.get('date')).date()
+                u['date_str'] = u['date'].strftime('%b %d, %Y')
+
+                u['header'] = md_and_strip(u['header'])
+                u['content'] = md_and_strip(u.get('content', None))
+        except yaml.YAMLError as exc:
+            print exc
+            raise
+
+    # sort updates by date
+    from operator import itemgetter
+    updates = sorted(updates, key=itemgetter('date'), reverse=True)
+
+    current_time = datetime.date.today()
+    upcoming_news = filter(lambda n: n['date'] >= current_time, updates)
+    past_news = filter(lambda n: n['date'] < current_time, updates)
 
     e.render_and_write(temp,
-                       dict(publications=bib.entries, updates=updates),
+                       dict(publications=bib.entries,
+                            upcoming_news=upcoming_news,
+                            past_news=past_news,
+                            bio=bio),
                        output_fn)
 
 
@@ -101,13 +91,11 @@ def page_not_found():
     e.render_and_write(temp, dict(
         title='Woops',
         content=content),
-        output)
+                       output)
 
 
-import os
 import shutil
 import errno
-import sys
 
 if __name__ == '__main__':
     index()

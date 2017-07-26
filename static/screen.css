@@ -1,23 +1,33 @@
 @charset "UTF-8";
 #navbar {
   border-radius: 0;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+}
+
+#update-panel {
+  height: 250px;
+  overflow-y: scroll;
+}
 
 .main.container {
   margin-top: 2rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+}
 
-.name.card > .content {
-  text-align: center; }
+.name.card>.content {
+  text-align: center;
+}
 
 .bibtexnumber {
-  padding-right: .5rem; }
+  padding-right: .5rem;
+}
 
 hr {
   border: 0;
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 blockquote {
   background: #f9f9f9;
@@ -31,7 +41,8 @@ blockquote {
   padding: 0.5em 40px;
   line-height: 1.45;
   position: relative;
-  color: #383838; }
+  color: #383838;
+}
 
 blockquote:before {
   color: #ccc;
@@ -39,45 +50,23 @@ blockquote:before {
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
-  vertical-align: -0.4em; }
+  vertical-align: -0.4em;
+}
 
 blockquote p {
-  display: inline; }
-
-div.calendar {
-  width: 64px;
-  height: 64px;
-  background-color: #ffffff;
-  display: inline-block; }
-  div.calendar header {
-    width: 64px;
-    height: 28px;
-    background-color: #fa565a;
-    line-height: 28px;
-    letter-spacing: 0.5px;
-    color: #fff;
-    text-align: center; }
-  div.calendar section {
-    width: 64px;
-    height: 36px;
-    background-color: #eee;
-    line-height: 36px;
-    color: #4c566b;
-    text-align: center;
-    z-index: 10;
-    font-size: 1.5rem; }
+  display: inline;
+}
 
 footer {
-  color: #ccc; }
+  color: #ccc;
+}
 
 footer a {
   color: #ccc;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 em {
   font-style: normal;
-  font-weight: bold; }
-
-.ui.label {
-  font-family: 'Lato';
-  padding: 5px 5px !important; }
+  font-weight: bold;
+}

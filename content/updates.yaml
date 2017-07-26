@@ -1,3 +1,35 @@
-    {% include updates.html year='2016' month='July' header='Paper Accepted to CCS\'16' description='
-    <em>Town Crier: An Authenticated Data Feed for Smart Contracts</em> is accepted to ACM CCS\'16' %} {% include updates.html year='2016' month='Apr' header='Paper Accepted to Security\'16' description='
-    <em>Stealing Machine Learning Models via Prediction APIs</em> is accepted to USENIX Security\'16' %}
+- header: Speaking at Ethereum Meetup
+  content: I'll speak on Town Crier at Silicon Valley [Ethereum Meetup](https://www.meetup.com/EthereumSiliconValley/events/241517216/?eventId=241517216).
+  date: August 13, 2017
+
+- header: Speaking at [USENIX Security'17](https://www.usenix.org/conference/usenixsecurity17)
+  content: I'll speak on REM at Security 2017, Vancouver, Canada.
+  date: August 18, 2017
+
+- header: Intern at [Intel Labs](https://www.intel.me/content/www/xr/en/research/intel-research.html) this summer
+  date: July 10, 2017
+
+- content: Town Crier, an SGX-based authenticated data feed, is officially live.
+           Start pouring trustworthy data into your smart contracts [now](http://www.town-crier.org/get-started.html).
+  header: Town Crier goes live!
+  date: 2017-5-15
+
+- content: Our paper on resource efficient mining is accepted to Security'17. Available [here](http://www.initc3.org/files/rem.pdf).
+  header: REM is accepted to USENIX Security'17
+  date: 2017-5-11
+
+- content: 'Solidus: Confidential Distributed Ledger Transactions via PVORM is now available at <a href="http://ia.cr/2017/317">ePrint</a>.'
+  header: Solidus paper is online
+  date: 2017-4-10
+
+- content: 'Sealed-Glass Proofs: Using Transparent Enclaves to Prove and Sell Knowledge is accepted to EuroS&P ''17.'
+  header: SGP is accepted to EuroS&P '17
+  date: 2016-10-17
+
+- content: 'Town Crier: An Authenticated Data Feed for Smart Contracts is accepted to ACM CCS''16.'
+  header: Town Crier is accepted to CCS'16
+  date: 2016-7-22
+
+- content: Stealing Machine Learning Models via Prediction APIs is accepted to USENIX Security'16.
+  header: Paper accepted to Security'16
+  date: 2016-5-13

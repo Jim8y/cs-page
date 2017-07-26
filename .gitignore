@@ -4,12 +4,8 @@ _site
 .DS_Store
 node_modules
 
-semantic/*
-!semantic/src
-
-semantic/src/*
-!semantic/src/site
 
 env/
 output/
+.idea
 *.pyc
