@@ -1,0 +1,27 @@
+language: python
+cache: pip
+python: 2.7.10
+install:
+- pip install -r requirements.txt
+script:
+- python main.py -d
+after_success:
+- chmod u+x compress.sh && ./compress.sh
+deploy:
+  matrix:
+  provider: s3
+  bucket: www.fanzhang.me
+  region: us-east-1
+  skip_cleanup: true
+  default_text_charset: utf-8
+  cache_control: max-age=43200
+  local-dir: output
+  detect_encoding: true
+  access_key_id: AKIAJM53XXEQFM4UKQUA
+  secret_access_key:
+    secure: VIjJvKrcu3jreB1IlP0E37otYgKcIl0zk3mric2vBeIfe1Wvk+2J5ZuR5zRIN0dXWPN7Wft6CBeYr/bJPP6RvUKCIpY13CN0+vuDF3iO7582agmwLT9pzwULo5mfFPkD+jGEh1LcEtR21si9a/8p318W/P9VWXUpNzZdy0QLaNHg6665thjpyE4stozel5zG/81LAxOLOSNxLQ89HPpDRTrW5tsPDxqFTtYZlLQORpcA/mfQhrkMSmJ3k/aoCCYGxTfxarwHJJRIJO+uz6OZwqcRO6+8+wmhdELibDwD64ioVTgYJQB+f6o8F8+42KfkOEV+YOKRlO88oMKsSWCSTH7ioydZeuQiwsi4UFu59VSpr4PxsOWMipifwxgr6YoQ+gwzKUy6mgo35Jf+M+XZ3uqYFCsjcF17JmxscqaAUyQ2kvMTPDj5chv2KZ40MIB3WG6roIc8NLXOeQ4/hLdyIMH1p/biAft82xy0OzOGsQda14v4J2Cml29VeN6a671E9nOUPUv+8R9+cGl67XtlQyzOgPV+L/RAPYiVHEBSb6F2U66kjq+R/V94HhEeLJ7XaGtQwzacxgVVmJUjcLnhiO+sbocUzJLU1kGwogOFdUv45WmBkA860C0jQSSQDSXygcATTg1YUpC0pEbblZZ6Nr6LnytIDvMsFO3no6VRMY4=
+notifications:
+  email:
+    recipients:
+    - bl4ck5unxx@gmail.com
+    on_failure: always
