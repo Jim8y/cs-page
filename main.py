@@ -22,7 +22,17 @@ from bibtexparser.bparser import BibTexParser
 def customizations(record):
     authors = record['author']
     count = authors.count('and') - 1
-    authors = authors.replace(' and', ',', count)
+
+    def highlight_my_name(name):
+        return '<b><u>' + name + '</u></b>'
+
+    # if comma separated, keep it as is
+    if ',' in authors:
+        authors = authors.replace('Zhang, Fan', highlight_my_name('Zhang, Fan'))
+    else:
+        # keep the last 'and'
+        authors = authors.replace('Fan Zhang', highlight_my_name('Fan Zhang'))
+        authors = authors.replace(' and', ',', count)
     record['author'] = authors
 
     record['title'] = record['title'].replace('{', '').replace('}', '')
@@ -43,7 +53,7 @@ def index():
     bibparser.customization = customizations
     bib = bibtexparser.loads(bib, parser=bibparser)
 
-    def md_and_strip(md):
+    def parse_md_and_strip(md):
         if not md:
             return None
         # parse markdown and rip off the outer <p>
@@ -59,8 +69,8 @@ def index():
                     u['date'] = dtparser.parse(u.get('date')).date()
                 u['date_str'] = u['date'].strftime('%b %d, %Y')
 
-                u['header'] = md_and_strip(u['header'])
-                u['content'] = md_and_strip(u.get('content', None))
+                u['header'] = parse_md_and_strip(u['header'])
+                u['content'] = parse_md_and_strip(u.get('content', None))
         except yaml.YAMLError as exc:
             print exc
             raise
