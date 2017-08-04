@@ -20,19 +20,33 @@ from bibtexparser.bparser import BibTexParser
 
 
 def customizations(record):
+    author_urls = {
+        'Ethan Cecchetti': 'https://www.cs.cornell.edu/~ethan/',
+        'Ari Juels': 'http://arijuels.com',
+        'Elaine Shi': 'http://elaineshi.com',
+        'Ittay Eyal': 'https://www.cs.cornell.edu/~ie53/',
+    }
+
     authors = record['author']
     count = authors.count('and') - 1
 
-    def highlight_my_name(name):
+    def boldface(name):
         return '<b><u>' + name + '</u></b>'
+
+    def linkify(names):
+        for a, l in author_urls.items():
+            names = names.replace(a, '<a href="%s">%s</a>' % (l, a))
+        return names
 
     # if comma separated, keep it as is
     if ',' in authors:
-        authors = authors.replace('Zhang, Fan', highlight_my_name('Zhang, Fan'))
+        authors = authors.replace('Zhang, Fan', boldface('Zhang, Fan'))
     else:
         # keep the last 'and'
-        authors = authors.replace('Fan Zhang', highlight_my_name('Fan Zhang'))
+        authors = authors.replace('Fan Zhang', boldface('Fan Zhang'))
         authors = authors.replace(' and', ',', count)
+
+        authors = linkify(authors)
     record['author'] = authors
 
     record['title'] = record['title'].replace('{', '').replace('}', '')
@@ -61,6 +75,7 @@ def index():
         from pyquery import PyQuery as pq
         return pq(text)('p').html()
 
+    # generate update panel
     with open('content/updates.yaml', 'r') as updates_yaml:
         try:
             updates = yaml.load(updates_yaml)
@@ -69,8 +84,7 @@ def index():
                     u['date'] = dtparser.parse(u.get('date')).date()
                 u['date_str'] = u['date'].strftime('%b %d, %Y')
 
-                u['header'] = parse_md_and_strip(u['header'])
-                u['content'] = parse_md_and_strip(u.get('content', None))
+                u['content'] = parse_md_and_strip(u['content'])
         except yaml.YAMLError as exc:
             print exc
             raise

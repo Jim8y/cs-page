@@ -4,6 +4,11 @@
   margin-bottom: 2rem;
 }
 
+#update-panel .update-date.label {
+  padding: .2rem .3rem;
+  margin-right: .2rem;
+}
+
 #update-panel {
   height: 250px;
   overflow-y: scroll;

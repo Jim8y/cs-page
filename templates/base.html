@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
     <script src="static/jquery-1.12.1.min.js"></script>
+    <script src="static/main-0.0.1.js"></script>
     <link rel="stylesheet" href="static/sui/semantic.css">
     <script src="static/sui/semantic.js"></script>
     <link rel="stylesheet" href="static/screen-1.0.0.css">
@@ -41,7 +42,9 @@
         {% block content %} {{ content }} {% endblock %}
     </div>
 
-    <h5 class="ui horizontal divider header"><i class="grey bug icon"></i></h5> {% include "footer.html" %}
+    <h5 class="ui horizontal divider header"><i class="grey bug icon"></i></h5>
+
+    {% include "footer.html" %}
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>

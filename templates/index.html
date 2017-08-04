@@ -25,20 +25,22 @@
 
 
 {% macro red_label(text) %}
-<div class="ui red label" style="font-family: monospace; padding: .3rem .5rem;">{{ text }}</div>
+<div class="ui red basic update-date label">{{ text }}</div>
 {% endmacro %}
 
 {% macro blue_label(text) %}
-<div class="ui blue label" style="font-family: monospace; padding: .3rem .5rem;">{{ text }}</div>
+<div class="ui blue basic update-date label">{{ text }}</div>
 {% endmacro %}
 
 
-<h1>Update</h1>
-<div class="ui segment" id="update-panel">
+<div class="ui piled segment">
+  <h1>Update</h1>
+  <div class=""  id="update-panel">
+
   <div class="ui bulleted list">
     {% for u in upcoming_news %}
     <div class="item">
-      <div class="header">{{ red_label(u.date_str) }} {{ u.header }}</div> {% if u.content %}{{ u.content }}{% endif %}
+      {{ red_label(u.date_str) }} {{ u.content }}
     </div>
     {% endfor %}
   </div>
@@ -46,10 +48,11 @@
   <div class="ui bulleted list">
     {% for u in past_news %}
     <div class="item">
-      <div class="header">{{ blue_label(u.date_str) }} {{ u.header }}</div> {% if u.content %}{{ u.content }}{% endif %}
+      {{ blue_label(u.date_str) }} {{ u.content }}
     </div>
     {% endfor %}
   </div>
+</div>
 </div>
 
 <h1>Publications</h1>
@@ -57,8 +60,14 @@
 <ul>
   {% for p in publications %}
   <li>
+    <span>
     {% if p.ENTRYTYPE == 'misc' %}
-    <div class="ui yellow label"> Manuscript </div> {% endif %} {{ p.author }}. <em>{{ p.title }}</em>. In {% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}{% if p.pages %}, {{ p.pages }}{% endif %}.
+    <div class="ui yellow label"> Manuscript </div>
+    {% endif %}
+
+    {{ p.author }}</span></br>
+    <span><b>{{ p.title }} </b></span></br>
+    In {% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}.
 
     <div class="ui small labels">
       {% if p.bibtexfile %} <a class="ui label" href="{{ p.bibtexfile }}">BibTeX</a>{% endif %} {% if p.link %} <a class="ui label" href="{{ p.link }}"><i class="linkify icon"></i>Link</a>{% endif %} {% if p.pdf %}
