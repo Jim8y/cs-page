@@ -3,11 +3,10 @@
 import datetime
 import os
 from os.path import join
-
-import bibtexparser
 import markdown
 import yaml
 from dateutil import parser as dtparser
+import bibtexparser
 
 from base import Engine
 
