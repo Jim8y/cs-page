@@ -1,4 +1,5 @@
 PWD=$(shell pwd)
+SHELL:=/bin/bash
 
 all: deploy-s3 deploy-cornell
 
