@@ -1,4 +1,4 @@
-I am a fourth year PhD student in the department of
+I am a PhD candidate in the department of
 [Computer Science](http://cs.cornell.edu) at
 [Cornell University](http://www.cornell.edu/).
 Under the able advice of Prof. [Ari Juels](http://arijuels.com),
