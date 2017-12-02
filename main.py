@@ -24,6 +24,7 @@ def customizations(record):
         'Ari Juels': 'http://arijuels.com',
         'Elaine Shi': 'http://elaineshi.com',
         'Ittay Eyal': 'https://www.cs.cornell.edu/~ie53/',
+        'Iddo Bentov': 'https://www.cs.cornell.edu/~iddo/',
     }
 
     authors = record['author']
