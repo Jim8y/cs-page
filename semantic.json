@@ -1,0 +1,37 @@
+{
+  "base": "semantic/",
+  "paths": {
+    "source": {
+      "config": "src/theme.config",
+      "definitions": "src/definitions/",
+      "site": "src/site/",
+      "themes": "src/themes/"
+    },
+    "output": {
+      "packaged": "../static/sui/",
+      "uncompressed": "../static/sui/components/",
+      "compressed": "../static/sui/components/",
+      "themes": "../static/sui/themes/"
+    },
+    "clean": "../static/sui/"
+  },
+  "permission": false,
+  "autoInstall": false,
+  "rtl": false,
+  "components": [
+    "reset",
+    "site",
+    "container",
+    "divider",
+    "header",
+    "icon",
+    "image",
+    "label",
+    "list",
+    "segment",
+    "grid",
+    "card",
+    "item"
+  ],
+  "version": "2.2.13"
+}

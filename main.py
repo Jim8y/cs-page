@@ -7,6 +7,8 @@ import markdown
 import yaml
 from dateutil import parser as dtparser
 import bibtexparser
+from operator import itemgetter
+from bibtexparser.bparser import BibTexParser
 
 from base import Engine
 
@@ -14,8 +16,6 @@ CWD = os.path.dirname(__file__)
 OUTPUT_DIR = os.path.join(CWD, 'output')
 
 e = Engine()
-
-from bibtexparser.bparser import BibTexParser
 
 
 def customizations(record):
@@ -25,6 +25,7 @@ def customizations(record):
         'Elaine Shi': 'http://elaineshi.com',
         'Ittay Eyal': 'https://www.cs.cornell.edu/~ie53/',
         'Iddo Bentov': 'https://www.cs.cornell.edu/~iddo/',
+        'Philip Daian': 'https://pdaian.com/',
     }
 
     authors = record['author']
@@ -82,7 +83,7 @@ def index():
             for u in updates:
                 if not isinstance(u['date'], datetime.date):
                     u['date'] = dtparser.parse(u.get('date')).date()
-                u['date_str'] = u['date'].strftime('%b %d, %Y')
+                u['date_str'] = u['date'].strftime('%D')
 
                 u['content'] = parse_md_and_strip(u['content'])
         except yaml.YAMLError as exc:
@@ -90,8 +91,11 @@ def index():
             raise
 
     # sort updates by date
-    from operator import itemgetter
     updates = sorted(updates, key=itemgetter('date'), reverse=True)
+
+    # media coverage
+    with open('content/media.yaml', 'r') as media_yaml:
+        media = yaml.load(media_yaml)
 
     current_time = datetime.date.today()
     upcoming_news = filter(lambda n: n['date'] >= current_time, updates)
@@ -101,7 +105,9 @@ def index():
                        dict(publications=bib.entries,
                             upcoming_news=upcoming_news,
                             past_news=past_news,
-                            bio=bio),
+                            bio=bio,
+                            media=media,
+                            ),
                        output_fn)
 
 
