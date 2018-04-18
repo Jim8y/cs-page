@@ -9,6 +9,7 @@ from dateutil import parser as dtparser
 import bibtexparser
 from operator import itemgetter
 from bibtexparser.bparser import BibTexParser
+from pyquery import PyQuery as pq
 
 from base import Engine
 
@@ -41,6 +42,7 @@ def customizations(record):
 
     # if comma separated, keep it as is
     if ',' in authors:
+        authors = authors.replace('Zhang, F', boldface('Zhang, F'))
         authors = authors.replace('Zhang, Fan', boldface('Zhang, Fan'))
     else:
         # keep the last 'and'
@@ -73,7 +75,6 @@ def index():
             return None
         # parse markdown and rip off the outer <p>
         text = markdown.markdown(md)
-        from pyquery import PyQuery as pq
         return pq(text)('p').html()
 
     # generate update panel
