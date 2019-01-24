@@ -8,12 +8,10 @@
 #update-panel {
   height: 250px;
   overflow-y: scroll;
-  font-size: 1em;
 }
 
-#bio {
-  font-weight: 300;
-  font-size: 1.5rem;
+#update-panel .ui.bulleted.list .item {
+  font-size: 1.2rem;
 }
 
 .main.container {

@@ -2,4 +2,5 @@
      User Global Variables
 *******************************/
 
-@headerFontWeight: 300;
+@fontName: 'Source Sans Pro';
+@emSize  : 15px;
