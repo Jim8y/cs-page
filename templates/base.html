@@ -3,7 +3,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="Fan Zhang, Cornell, PhD, Computer Science, SGX, Security Research, Blockchain, Bitcoin, Smart contract">
+    <meta name="keywords"
+          content="Fan Zhang, Cornell, PhD, Computer Science, SGX, Security Research, Blockchain, Bitcoin, Smart contract">
     <meta name="author" content="Fan Zhang">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -31,6 +32,7 @@
 
         ga('create', 'UA-72748416-3', 'auto');
         ga('send', 'pageview');
+
     </script>
     <title>
         {% block title %} Fan Zhang {% endblock %}
@@ -39,15 +41,15 @@
 <html>
 
 <body>
-    <div class="ui text main container">
-        {% block content %} {{ content }} {% endblock %}
-    </div>
+<div class="ui text main container">
+    {% block content %} {{ content }} {% endblock %}
+</div>
 
-    <h5 class="ui horizontal divider header"><i class="grey bug icon"></i></h5>
+<h5 class="ui horizontal divider header"><i class="grey bug icon"></i></h5>
 
-    {% include "footer.html" %}
+{% include "footer.html" %}
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 
 </html>

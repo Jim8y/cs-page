@@ -1,19 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="ui medium left floated image"> <img src="static/fan.jpg"> </div>
+<div class="ui medium left floated image"><img src="static/fan.jpg"></div>
 <h1 class="ui header">Fan Zhang</h1>
-<div id="bio"> {{ bio }} </div>
+<div id="bio"> {{ bio }}</div>
 
 <ul>
-  <li>Email: fanz<i class="at icon"></i>cs.cornell.edu</li>
-  <li>GitHub: <a class="github-button" href="https://github.com/bl4ck5un" aria-label="Follow @bl4ck5un on GitHub">Follow @bl4ck5un</a></li>
-  <li>Google Scholar: <a href="https://scholar.google.com/citations?user=YTokrfkAAAAJ&hl=en"><i class="ai ai-google-scholar-square"></i></a></li>
-  <li>CV: <a href="files/cv_latest.pdf"><i class="file pdf outline icon"></i></a></li>
+    <li>Email: fanz<i class="at icon"></i>cs.cornell.edu</li>
+    <li>GitHub: <a class="github-button" href="https://github.com/bl4ck5un" aria-label="Follow @bl4ck5un on GitHub">Follow
+        @bl4ck5un</a></li>
+    <li>Google Scholar: <a href="https://scholar.google.com/citations?user=YTokrfkAAAAJ&hl=en"><i
+            class="ai ai-google-scholar-square"></i></a></li>
+    <li>CV: <a href="files/cv_latest.pdf"><i class="file pdf outline icon"></i></a></li>
 </ul>
 
 {% macro star(repo) %}
-<a class="github-button" href="https://github.com/{{ repo }}" data-show-count="true" aria-label="Star {{ repo }} on GitHub">Star</a> {% endmacro %}
+<a class="github-button" href="https://github.com/{{ repo }}" data-show-count="true"
+   aria-label="Star {{ repo }} on GitHub">Star</a> {% endmacro %}
 
 {% macro red_label(text) %}
 <div class="ui red basic update-date label">{{ text }}</div>
@@ -24,28 +27,28 @@
 {% endmacro %}
 
 <div class="ui raised segment">
-  <h1 class="ui red header">Update</h1>
-  <div class="" id="update-panel">
+    <h1 class="ui red header">Update</h1>
+    <div class="" id="update-panel">
 
-  {% if upcoming_news | length > 0%}
-  <div class="ui bulleted list">
-    {% for u in upcoming_news %}
-    <div class="item">
-      {{ u.date_str }}: {{ u.content }}
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
+        {% if upcoming_news | length > 0%}
+        <div class="ui bulleted list">
+            {% for u in upcoming_news %}
+            <div class="item">
+                {{ u.date_str }}: {{ u.content }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
 
-  <h3>Past News</h3>
-  <div class="ui bulleted list">
-    {% for u in past_news %}
-    <div class="item">
-      {{ u.date_str }}: {{ u.content }}
+        <h3>Past News</h3>
+        <div class="ui bulleted list">
+            {% for u in past_news %}
+            <div class="item">
+                {{ u.date_str }}: {{ u.content }}
+            </div>
+            {% endfor %}
+        </div>
     </div>
-    {% endfor %}
-  </div>
-</div>
 </div>
 
 
@@ -53,31 +56,33 @@
 
 <ul>
     {% for m in media %}
-    <li><a href="{{ m.url }}">{{ m.title }}</a> by <b>{{ m.venue }}</b> on {{ m.date }}, featured <span class="ui small label">{{ m.project }}</span></li>
+    <li><a href="{{ m.url }}">{{ m.title }}</a> by <b>{{ m.venue }}</b> on {{ m.date }}</li>
     {% endfor %}
 </ul>
 
 <h1 class="ui red header">Awards</h1>
 
 <ul>
-  <li> 2018 IBM PhD Fellowship Award
+    <li> 2018 IBM PhD Fellowship Award
 </ul>
 
 <h1 class="ui red header">Publications</h1>
 
 <ul>
-  {% for p in publications %}
-  <li>
-    <span>{% if p.ENTRYTYPE == 'misc' %}<div class="ui yellow tiny label">Manuscript</div>{% endif %}<b>{{ p.title }} </b>.</span>
-    <span>{{ p.author }}.</span>
-    In <i>{% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}</i>.
+    {% for p in publications %}
+    <li>
+        <span>{% if p.ENTRYTYPE == 'misc' %}<div class="ui yellow tiny label">Manuscript</div>{% endif %}<b>{{ p.title }} </b>.</span>
+        <span>{{ p.author }}.</span>
+        In <i>{% if p.ENTRYTYPE == 'misc' %}{{ p.howpublished }}{% else %}{{ p.booktitle }}{% endif %}</i>.
 
-    <div class="ui tiny labels">
-      {% if p.bibtexfile %} <a class="ui label" href="{{ p.bibtexfile }}">BibTeX</a>{% endif %} {% if p.link %} <a class="ui label" href="{{ p.link }}"><i class="linkify icon"></i>Link</a>{% endif %} {% if p.pdf %}
-      <a class="ui label" href="{{ p.pdf }}"><i class="file pdf outline icon"></i>PDF</a>{% endif %} {% if p.ppt %} <a class="ui label" href="{{ p.ppt }}"><i class="file powerpoint outline icon"></i>PPT</a>{% endif %}
-    </div>
-  </li>
-  {% endfor %}
+        <div class="ui tiny labels">
+            {% if p.bibtexfile %} <a class="ui label" href="{{ p.bibtexfile }}">BibTeX</a>{% endif %} {% if p.link %} <a
+                class="ui label" href="{{ p.link }}"><i class="linkify icon"></i>Link</a>{% endif %} {% if p.pdf %}
+            <a class="ui label" href="{{ p.pdf }}"><i class="file pdf outline icon"></i>PDF</a>{% endif %} {% if p.ppt
+            %} <a class="ui label" href="{{ p.ppt }}"><i class="file powerpoint outline icon"></i>PPT</a>{% endif %}
+        </div>
+    </li>
+    {% endfor %}
 </ul>
 
 
@@ -88,29 +93,33 @@
 </ul>
 
 
-<h1 class="ui red header">Software</h1> I'm enthusiastic about open-source software and trying earnestly to contribute to greater communities. Here are some of my projects:
+<h1 class="ui red header">
+    Software</h1> I'm enthusiastic about open-source software and trying earnestly to contribute to greater communities. Here are some of my projects:
 
 <ul>
-  <li>{{ star("bl4ck5un/town-crier") }}<b>Town Crier</b>: an SGX-based authenticated data feeds for smart contracts. </li>
-  <li>{{ star("bl4ck5un/mbedtls-sgx") }}<b>mbedTLS-SGX</b>: a port of mbedtls to be used as an SGX library. </li>
-  <li>{{ star("bl4ck5un/hybrid-enc") }}<b>hybrid-enc</b>: ECDH + AES-256 encryption based on mbedtls.</li>
+    <li>{{ star("bl4ck5un/town-crier") }}<b>Town Crier</b>: an SGX-based authenticated data feeds for smart contracts.
+    </li>
+    <li>{{ star("bl4ck5un/mbedtls-sgx") }}<b>mbedTLS-SGX</b>: a port of mbedtls to be used as an SGX library.</li>
+    <li>{{ star("bl4ck5un/hybrid-enc") }}<b>hybrid-enc</b>: ECDH + AES-256 encryption based on mbedtls.</li>
 </ul>
 
-Consider following me on GitHub <a class="github-button" href="https://github.com/bl4ck5un" aria-label="Follow @bl4ck5un on GitHub">Follow @bl4ck5un</a>.
+Consider following me on GitHub <a class="github-button" href="https://github.com/bl4ck5un"
+                                   aria-label="Follow @bl4ck5un on GitHub">Follow @bl4ck5un</a>.
 
 <h1 class="ui red header"> Teaching </h1>
 <ul>
-  <li> 2015 Fall, (Part Time) TA for <a href="http://www.arijuels.com/teaching/cs-5435-fall-2015">CS 5435: Security and Privacy in the Wild</a></li>
-  <li> 2015 Spring, TA for CS 5300: Large-scale Information Systems </li>
-  <li> 2014 Fall, TA for CS 4410: Operating Systems </li>
+    <li> 2015 Fall, (Part Time) TA for <a href="http://www.arijuels.com/teaching/cs-5435-fall-2015">CS 5435: Security
+        and Privacy in the Wild</a></li>
+    <li> 2015 Spring, TA for CS 5300: Large-scale Information Systems</li>
+    <li> 2014 Fall, TA for CS 4410: Operating Systems</li>
 </ul>
 
 <h1 class="ui red header"> Contact </h1>
 <ul>
-  <li><i class="at icon"></i>fanz at cs.cornell.edu</li>
-  <li><i class="file pdf outline icon"></i><a href="files/cv_fanzhang.pdf">CV</a></li>
-  <li><i class="mail icon"></i>2 West Loop Road, New York, NY 10044</li>
-  <li><i class="calendar icon"></i><a href="https://fanz.youcanbook.me">youcanbook.me</a></li>
+    <li><i class="at icon"></i>fanz at cs.cornell.edu</li>
+    <li><i class="file pdf outline icon"></i><a href="files/cv_fanzhang.pdf">CV</a></li>
+    <li><i class="mail icon"></i>2 West Loop Road, New York, NY 10044</li>
+    <li><i class="calendar icon"></i><a href="https://fanz.youcanbook.me">youcanbook.me</a></li>
 </ul>
 
 {% endblock %}

@@ -10,6 +10,8 @@ import bibtexparser
 from operator import itemgetter
 from bibtexparser.bparser import BibTexParser
 from pyquery import PyQuery as pq
+import shutil
+import errno
 
 from base import Engine
 
@@ -36,7 +38,7 @@ def customizations(record):
         return '<b><u>' + name + '</u></b>'
 
     def linkify(names):
-        for a, l in author_urls.items():
+        for a, l in list(author_urls.items()):
             names = names.replace(a, '<a href="%s">%s</a>' % (l, a))
         return names
 
@@ -88,7 +90,7 @@ def index():
 
                 u['content'] = parse_md_and_strip(u['content'])
         except yaml.YAMLError as exc:
-            print exc
+            print(exc)
             raise
 
     # sort updates by date
@@ -99,8 +101,8 @@ def index():
         media = yaml.load(media_yaml)
 
     current_time = datetime.date.today()
-    upcoming_news = filter(lambda n: n['date'] >= current_time, updates)
-    past_news = filter(lambda n: n['date'] < current_time, updates)
+    upcoming_news = [n for n in updates if n['date'] >= current_time]
+    past_news = [n for n in updates if n['date'] < current_time]
 
     e.render_and_write(temp,
                        dict(publications=bib.entries,
@@ -124,9 +126,6 @@ def page_not_found():
         content=content),
                        output)
 
-
-import shutil
-import errno
 
 if __name__ == '__main__':
     index()

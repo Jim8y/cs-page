@@ -12,14 +12,15 @@ import shutil
 
 import time
 
-
 CWD = os.path.dirname(__file__)
 OUTPUT_DIR = os.path.join(CWD, 'output')
 
-def dateformat(value, format='%b %d, %Y'):
+
+def date_format(value, format='%b %d, %Y'):
     return value.strftime(format)
 
-class Engine (object):
+
+class Engine(object):
     env = Environment(loader=FileSystemLoader('templates'))
     output_dir = OUTPUT_DIR
 
@@ -29,28 +30,16 @@ class Engine (object):
             shutil.rmtree(OUTPUT_DIR)
         os.mkdir(OUTPUT_DIR)
 
-        self.env.filters['dateformat'] = dateformat
-
+        self.env.filters['dateformat'] = date_format
 
     def render(self, temp, cntx):
         x = copy.copy(cntx)
         x.update(self.def_cntx)
         return temp.render(x)
 
-    def write(self, content, filename):
-        with open(filename, 'w') as f:
-            f.write(content)
-
-    def write_utf8(self, utf8, filename):
-        try:
-            out = utf8.encode('utf-8')
-        except:
-            raise
-
-        self.write(out, filename)
-
     def render_and_write(self, template, cntx, path):
-        self.write_utf8(self.render(template, cntx), path)
+        with open(path, 'w') as f:
+            f.write(self.render(template, cntx))
 
     def get_def_cntx(self):
         return copy.copy(self.def_cntx)
