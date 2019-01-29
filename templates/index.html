@@ -16,7 +16,8 @@
 
 {% macro star(repo) %}
 <a class="github-button" href="https://github.com/{{ repo }}" data-show-count="true"
-   aria-label="Star {{ repo }} on GitHub">Star</a> {% endmacro %}
+   aria-label="Star {{ repo }} on GitHub">Star</a>
+{% endmacro %}
 
 {% macro red_label(text) %}
 <div class="ui red basic update-date label">{{ text }}</div>
@@ -26,8 +27,8 @@
 <div class="ui blue basic update-date label">{{ text }}</div>
 {% endmacro %}
 
+<h1 class="ui red header">Update</h1>
 <div class="ui raised segment">
-    <h1 class="ui red header">Update</h1>
     <div class="" id="update-panel">
 
         {% if upcoming_news | length > 0%}
@@ -50,6 +51,9 @@
         </div>
     </div>
 </div>
+
+<h1 class="ui red header">Invited Talks (Selected)</h1>
+<div>{{ talks }}</div>
 
 
 <h1 class="ui red header">Media Coverage</h1>
