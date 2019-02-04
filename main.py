@@ -96,6 +96,10 @@ def index():
     # sort updates by date
     updates = sorted(updates, key=itemgetter('date'), reverse=True)
 
+    # invited talks
+    with open('content/talks.md') as talks_md:
+        talks = markdown.markdown(talks_md.read())
+
     # media coverage
     with open('content/media.yaml', 'r') as media_yaml:
         media = yaml.load(media_yaml)
@@ -109,6 +113,7 @@ def index():
                             upcoming_news=upcoming_news,
                             past_news=past_news,
                             bio=bio,
+                            talks=talks,
                             media=media,
                             ),
                        output_fn)
