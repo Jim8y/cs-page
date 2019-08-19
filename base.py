@@ -1,16 +1,11 @@
-import yaml
-import re
-from jinja2 import FileSystemLoader, Environment
-import os
-import codecs
-import markdown
-
 import copy
-
-from os.path import exists
+import os
+import re
 import shutil
-
 import time
+from os.path import exists
+
+from jinja2 import FileSystemLoader, Environment
 
 CWD = os.path.dirname(__file__)
 OUTPUT_DIR = os.path.join(CWD, 'output')
@@ -25,7 +20,8 @@ class Engine(object):
     output_dir = OUTPUT_DIR
 
     def __init__(self):
-        self.def_cntx = dict(SITE_ROOT=OUTPUT_DIR, now=time.strftime("%d/%m/%Y"))
+        self.def_cntx = dict(SITE_ROOT=OUTPUT_DIR,
+                             now=time.strftime("%d/%m/%Y"))
         if exists(OUTPUT_DIR):
             shutil.rmtree(OUTPUT_DIR)
         os.mkdir(OUTPUT_DIR)

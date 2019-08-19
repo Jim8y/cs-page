@@ -1,18 +1,19 @@
 # encoding: utf-8
 
 import datetime
+import errno
 import os
+import shutil
+from operator import itemgetter
 from os.path import join
+
+import bibtexparser
 import markdown
 import yaml
-from dateutil import parser as dtparser
-import bibtexparser
-from operator import itemgetter
 from bibtexparser.bparser import BibTexParser
-from bibtexparser.customization import convert_to_unicode, protect_uppercase
+from bibtexparser.customization import convert_to_unicode
+from dateutil import parser as dtparser
 from pyquery import PyQuery as pq
-import shutil
-import errno
 
 from base import Engine
 
@@ -64,21 +65,21 @@ def customizations(record):
     record['title'] = record['title'].replace('{', '').replace('}', '')
 
     # crossref media coverage
-    # media coverage
     with open('content/media.yaml', 'r') as media_yaml:
         media = yaml.full_load(media_yaml)
 
-    media_indexed = dict()
+    from collections import defaultdict
+    media_indexed = defaultdict(list)
     for m in media:
-        media_key = m['project']
-        media_indexed[media_key] = []
+        media_key = m['project'].lower()
         media_indexed[media_key].append({
             'venue': m['venue'],
             'url': m['url']
         })
 
     if 'mediakey' in record:
-        record['media'] = media_indexed[record['mediakey']]
+        print(media_indexed[record['mediakey'].lower()])
+        record['media'] = media_indexed[record['mediakey'].lower()]
 
     return record
 
@@ -153,7 +154,7 @@ def page_not_found():
     e.render_and_write(temp, dict(
         title='Woops',
         content=content),
-                       output)
+        output)
 
 
 if __name__ == '__main__':

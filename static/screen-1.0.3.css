@@ -47,3 +47,11 @@ em {
   font-style: normal;
   font-weight: bold;
 }
+
+.media.coverage {
+  color: red;
+}
+
+.media.coverage a {
+  color: red;
+}

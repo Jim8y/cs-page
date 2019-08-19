@@ -5,10 +5,8 @@
         In {% if p.eprint %}submission{% else %}{{ p.booktitle }}, {{ p.year }}{% endif %}.
 
         {% if p.media %}
-        <div class="ui tiny labels">
-            {% for article in p.media %}
-            <i>{{ article.venue }}</i> article <a href="{{ article.url }}">here</a>.
-            {% endfor %}
+        <div class="media coverage">
+            <i class="newspaper outline icon"></i> Media coverage by: {% for article in p.media %}<a href="{{ article.url }}">{{ article.venue }}</a> {% if not loop.last %}, {% endif %}{% endfor %}
         </div>
         {% endif %}
     </div>
