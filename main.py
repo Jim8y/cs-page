@@ -78,7 +78,6 @@ def customizations(record):
         })
 
     if 'mediakey' in record:
-        print(media_indexed[record['mediakey'].lower()])
         record['media'] = media_indexed[record['mediakey'].lower()]
 
     return record
