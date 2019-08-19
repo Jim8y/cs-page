@@ -32,13 +32,12 @@
   date: Jul 9, 2018
   project: Ekiden
 
-
 -
   title: Cornell IC3 Researchers Propose Solution to Bitcoin's Multisig "Paralysis" Problem
   url: 'https://bitcoinmagazine.com/articles/cornell-ic3-researchers-propose-solution-bitcoins-multisig-paralysis-problem/'
   venue: BitcoinMagazine
   date: Jan 19, 2018
-  project: Paralysis Proof
+  project: ParalysisProofs
 
 -
   title: The Ridiculous Amount of Energy It Takes to Run Bitcoin

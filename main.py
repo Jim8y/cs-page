@@ -9,6 +9,7 @@ from dateutil import parser as dtparser
 import bibtexparser
 from operator import itemgetter
 from bibtexparser.bparser import BibTexParser
+from bibtexparser.customization import convert_to_unicode, protect_uppercase
 from pyquery import PyQuery as pq
 import shutil
 import errno
@@ -31,6 +32,12 @@ def customizations(record):
         'Philip Daian': 'https://pdaian.com/',
     }
 
+    record = convert_to_unicode(record)
+
+    if record.get('ENTRYTYPE') is not 'inproceedings':
+        record['draft'] = True
+        record['eprint'] = record.get('journal')
+
     authors = record['author']
     count = authors.count('and') - 1
 
@@ -51,10 +58,28 @@ def customizations(record):
         authors = authors.replace('Fan Zhang', boldface('Fan Zhang'))
         authors = authors.replace(' and', ',', count)
 
-        authors = linkify(authors)
+        # authors = linkify(authors)
     record['author'] = authors
 
     record['title'] = record['title'].replace('{', '').replace('}', '')
+
+    # crossref media coverage
+    # media coverage
+    with open('content/media.yaml', 'r') as media_yaml:
+        media = yaml.full_load(media_yaml)
+
+    media_indexed = dict()
+    for m in media:
+        media_key = m['project']
+        media_indexed[media_key] = []
+        media_indexed[media_key].append({
+            'venue': m['venue'],
+            'url': m['url']
+        })
+
+    if 'mediakey' in record:
+        record['media'] = media_indexed[record['mediakey']]
+
     return record
 
 
@@ -62,15 +87,14 @@ def index():
     temp = e.env.get_template('index.html')
     output_fn = e.get_root_fn('index.html')
 
-    with open('content/fan.bib') as bfile:
-        bib = bfile.read()
-
     with open('content/bio.md') as bio_md:
         bio = markdown.markdown(bio_md.read())
 
-    bibparser = BibTexParser()
-    bibparser.customization = customizations
-    bib = bibtexparser.loads(bib, parser=bibparser)
+    # with open('content/fan.bib') as bfile:
+    with open('content/Zhang_0022:Fan.bib') as bfile:
+        bibparser = BibTexParser()
+        bibparser.customization = customizations
+        bib = bibtexparser.load(bfile, parser=bibparser)
 
     def parse_md_and_strip(md):
         if not md:
@@ -109,7 +133,7 @@ def index():
     past_news = [n for n in updates if n['date'] < current_time]
 
     e.render_and_write(temp,
-                       dict(publications=bib.entries,
+                       dict(publication=bib.entries,
                             upcoming_news=upcoming_news,
                             past_news=past_news,
                             bio=bio,
