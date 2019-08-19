@@ -82,11 +82,11 @@ def index():
     # generate update panel
     with open('content/updates.yaml', 'r') as updates_yaml:
         try:
-            updates = yaml.load(updates_yaml)
+            updates = yaml.full_load(updates_yaml)
             for u in updates:
                 if not isinstance(u['date'], datetime.date):
                     u['date'] = dtparser.parse(u.get('date')).date()
-                u['date_str'] = u['date'].strftime('%D')
+                u['date_str'] = u['date'].strftime('%b. %Y')
 
                 u['content'] = parse_md_and_strip(u['content'])
         except yaml.YAMLError as exc:
@@ -102,7 +102,7 @@ def index():
 
     # media coverage
     with open('content/media.yaml', 'r') as media_yaml:
-        media = yaml.load(media_yaml)
+        media = yaml.full_load(media_yaml)
 
     current_time = datetime.date.today()
     upcoming_news = [n for n in updates if n['date'] >= current_time]

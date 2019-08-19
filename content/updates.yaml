@@ -1,7 +1,13 @@
+- content: "Our paper on dynamic-committee secret sharing is now posted [online](https://eprint.iacr.org/2019/017)."
+  date: 2019-01-01
+
+- content: "Our paper titled **Ekiden: A Platform for Confidentiality-Preserving, Trustworthy, and Performant Smart Contract Execution** is accepted to EuroS&P'19!"
+  date: 2019-04-01
+
 - content: "Town Crier, a trusted hardware-based oracle for smart contracts is [aquired](https://www.forbes.com/sites/darrynpollock/2018/11/01/cornells-town-crier-acquired-by-chainlink-to-expand-decentralized-oracle-network/#1730192d2854) by ChainLink!"
   date: 2018-11-01
 
-- content: "I'm awarded the **2018 IBM PhD Fellowship Award**"
+- content: "I'm awarded the **IBM PhD Fellowship Award** for 2018-2020."
   date: 2018-03-30
 
 - content: 'I presented **Paralysis Proof** at the 5th Bitcoin workshop @ Financial Crypto 2018 in Curacao.'
@@ -22,7 +28,7 @@
 - content: _Town Crier_ is officially [live](http://www.town-crier.org/get-started.html)!
   date: 2017-5-15
 
-- content: '_REM: Resource-Efficient Mining for Blockchains_ paper is accepted to Security''17. Available [here](http://www.initc3.org/files/rem.pdf).'
+- content: '_REM: Resource-Efficient Mining for Blockchains_ paper is accepted to USENIX Security''17. Available [here](http://www.initc3.org/files/rem.pdf).'
   date: 2017-5-11
 
 - content: '_Sealed-Glass Proofs: Using Transparent Enclaves to Prove and Sell Knowledge_ is accepted to EuroS&P ''17.'

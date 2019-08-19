@@ -29,12 +29,11 @@
 <h1 class="ui red header">Update</h1>
 <div class="ui raised segment">
     <div class="" id="update-panel">
-
         {% if upcoming_news | length > 0%}
         <div class="ui bulleted list">
             {% for u in upcoming_news %}
             <div class="item">
-                {{ u.date_str }}: {{ u.content }}
+                {{ u.date_str }}, {{ u.content }}
             </div>
             {% endfor %}
         </div>
@@ -44,7 +43,7 @@
         <div class="ui bulleted list">
             {% for u in past_news %}
             <div class="item">
-                {{ u.date_str }}: {{ u.content }}
+                {{ u.date_str }}, {{ u.content }}
             </div>
             {% endfor %}
         </div>
