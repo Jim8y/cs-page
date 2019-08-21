@@ -43,7 +43,7 @@ def customizations(record):
     count = authors.count('and') - 1
 
     def boldface(name):
-        return '<b><u>' + name + '</u></b>'
+        return '<strong>' + name + '</strong>'
 
     def linkify(names):
         for a, l in list(author_urls.items()):

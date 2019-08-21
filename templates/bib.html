@@ -1,12 +1,14 @@
 <div class="ui relaxed bulleted list">
     {% for p in publication %}
     <div class="item">
-        {{ p.author }}. <a href="{{ p.url }}">{{ p.title }}</a>.
-        In {% if p.eprint %}submission{% else %}{{ p.booktitle }}, {{ p.year }}{% endif %}.
+        <span>{{ p.author }}. <a href="{{ p.url }}">{{ p.title }}</a>.
+        In {% if p.eprint %}submission{% else %}{{ p.booktitle }}, {{ p.year }}{% endif %}.</span>
 
         {% if p.media %}
         <div class="media coverage">
-            <i class="newspaper outline icon"></i> Media coverage by: {% for article in p.media %}<a href="{{ article.url }}">{{ article.venue }}</a> {% if not loop.last %}, {% endif %}{% endfor %}
+          <span>
+            <i class="newspaper outline icon"></i>Media coverage by: {% for article in p.media %}<a href="{{ article.url }}">{{ article.venue }}</a> {% if not loop.last %}, {% endif %}{% endfor %}
+          </span>
         </div>
         {% endif %}
     </div>

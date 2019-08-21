@@ -2,5 +2,13 @@
      User Global Variables
 *******************************/
 
-@fontName: 'Source Sans Pro';
-@emSize  : 15px;
+@fontName   : 'Roboto';
+@headerFont : 'Montserrat';
+@headerFontWeight : @normal;
+
+@linkColor: #008aff;
+
+// @emSize : 15px;
+// @fontSize : 15px;
+
+@googleFontRequest : '@{fontName}:400,700|@{headerFont}&subset=@{googleSubset}';
