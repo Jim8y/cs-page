@@ -19,5 +19,5 @@
   "autoInstall": false,
   "rtl": false,
   "components": ["reset", "site", "container", "divider", "header", "icon", "image", "label", "list", "segment", "grid", "card", "item", "menu", "sticky", "dropdown", "transition"],
-  "version": "2.4.2"
+  "version": "2.7.8"
 }
