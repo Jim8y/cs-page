@@ -2,9 +2,9 @@ language: python
 cache: pip
 python: "3.6"
 install:
-- pip install -r requirements.txt
+- pip3 install -r requirements.txt
 script:
-- python main.py -d
+- python3 main.py
 after_success:
 - chmod u+x compress.sh && ./compress.sh
 deploy:

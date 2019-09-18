@@ -1,7 +1,19 @@
-# encoding: utf-8
+"""
+Generate this website.
+
+Usage:
+  main.py [options]
+
+Options:
+  -h --help                 Show this screen.
+  --version                 Show version.
+  -m                        Keep running to monitor changes.
+  -o                        Open the output in a webbrowser.
+"""
 
 import datetime
 import errno
+import logging
 import os
 import shutil
 from operator import itemgetter
@@ -16,11 +28,6 @@ from dateutil import parser as dtparser
 from pyquery import PyQuery as pq
 
 from base import Engine
-
-CWD = os.path.dirname(__file__)
-OUTPUT_DIR = os.path.join(CWD, 'output')
-
-e = Engine()
 
 
 def customizations(record):
@@ -83,10 +90,7 @@ def customizations(record):
     return record
 
 
-def index():
-    temp = e.env.get_template('index.html')
-    output_fn = e.get_root_fn('index.html')
-
+def index(engine: Engine) -> None:
     with open('content/bio.md') as bio_md:
         bio = markdown.markdown(bio_md.read())
 
@@ -120,6 +124,9 @@ def index():
     # sort updates by date
     updates = sorted(updates, key=itemgetter('date'), reverse=True)
 
+    # ignore old stuff before 2018
+    updates = list(filter(lambda u: u['date'].year >= 2018, updates))
+
     # invited talks
     with open('content/talks.md') as talks_md:
         talks = markdown.markdown(talks_md.read())
@@ -132,39 +139,55 @@ def index():
     upcoming_news = [n for n in updates if n['date'] >= current_time]
     past_news = [n for n in updates if n['date'] < current_time]
 
-    e.render_and_write(temp,
-                       dict(publication=bib.entries,
-                            upcoming_news=upcoming_news,
-                            past_news=past_news,
-                            bio=bio,
-                            talks=talks,
-                            media=media,
-                            ),
-                       output_fn)
+    engine.render_with_context('index.html', 'index.html', dict(publication=bib.entries,
+                                                                upcoming_news=upcoming_news,
+                                                                past_news=past_news,
+                                                                bio=bio,
+                                                                talks=talks,
+                                                                media=media,
+                                                                ))
 
 
-def page_not_found():
-    output = e.get_root_fn('404.html')
-    temp = e.env.get_template('base.html')
-
+def page_not_found(engine: Engine) -> None:
     with open('./content/404.html', 'r') as c:
         content = c.read()
 
-    e.render_and_write(temp, dict(
+    engine.render_with_context('base.html', '404.html', dict(
         title='Woops',
-        content=content),
-        output)
+        content=content))
 
 
-if __name__ == '__main__':
-    index()
-    page_not_found()
-
+def static(engine: Engine) -> None:
     try:
-        shutil.copytree('static', join(OUTPUT_DIR, 'static'))
-        shutil.copytree('files', join(OUTPUT_DIR, 'files'))
+        shutil.copytree('static', join(engine.output_dir, 'static'))
+        shutil.copytree('files', join(engine.output_dir, 'files'))
     except OSError as e:
         if e.errno == errno.EEXIST:
             pass
         else:
             raise
+
+
+if __name__ == '__main__':
+    from docopt import docopt
+
+    args = docopt(__doc__)
+
+    CWD = os.path.dirname(os.path.realpath(__file__))
+    OUTPUT_DIR = os.path.join(CWD, 'output')
+    CONTENT_DIR = os.path.join(CWD, 'content')
+
+    logging.basicConfig(level=logging.INFO,
+                        format='%(asctime)s - %(message)s',
+                        datefmt='%Y-%m-%d %H:%M:%S')
+
+    engine = Engine(output_dir=OUTPUT_DIR, content_dir=CONTENT_DIR)
+
+    engine.register(index)
+    engine.register(page_not_found)
+    engine.register(static)
+
+    if args['-m']:
+        engine.watch(open_output=args['-o'])
+    else:
+        engine.build(open_output=args['-o'])
