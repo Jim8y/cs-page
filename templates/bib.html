@@ -1,8 +1,12 @@
-<!-- <div class="ui relaxed bulleted list">
+<div class="ui relaxed bulleted list">
     {% for p in publication %}
     <div class="item">
         <span>{{ p.author }}. <a href="{{ p.url }}">{{ p.title }}</a>.
         In {% if p.eprint %}submission{% else %}<b>{{ p.booktitle }}</b>, {{ p.year }}{% endif %}.</span>
+
+        {% if p.note %}
+        <span>{{ p.note }}</span>
+        {% endif %}
 
         {% if p.media %}
         <div class="media coverage">
@@ -13,8 +17,8 @@
         {% endif %}
     </div>
     {% endfor %}
-</div> -->
-
+</div>
+<!--
 
   <div class="ui relaxed bulleted list">
     <div class="item">
@@ -172,4 +176,4 @@ Thomas Ristenpart. <a href="https://www.usenix.org/conference/usenixsecurity16/t
 
 
     </div>
-    </div>
+    </div> -->
