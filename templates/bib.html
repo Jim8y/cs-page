@@ -4,8 +4,6 @@
         <span>{{ p.author }}. <a href="{{ p.url }}">{{ p.title }}</a>.
         In {% if p.eprint %}submission{% else %}<b>{{ p.booktitle }}</b>, {{ p.year }} {% if p.note %}<span>{{ p.note }}</span>{% endif %}{% endif %}.</span>
 
-
-
         {% if p.media %}
         <div class="media coverage">
           <span>
