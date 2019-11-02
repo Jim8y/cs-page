@@ -27,25 +27,17 @@ def format_names(children, context, role, **kwargs):
 
     style = context['style']
 
-    if len(persons) > 7:
-        persons = persons[:6] + persons[-1:]
-        formatted_names = [style.format_name(
-            person, style.abbreviate_names) for person in persons]
-        return join(sep=', ', last_sep=', … ')[
-            formatted_names].format_data(context)
-    else:
-        formatted_names = [style.format_name(
-            person, style.abbreviate_names) for person in persons]
-        return join(sep=', ', sep2=', ', last_sep=', and ')[
-            formatted_names].format_data(context)
+    formatted_names = [style.format_name(
+        person, style.abbreviate_names) for person in persons]
+    return join(sep=', ', sep2=', ', last_sep=', and ')[formatted_names].format_data(context)
 
 
 class Minimalism(BaseStyle):
     # shorthand for the template sentence that extracts year
     date = words[field('year'), optional[", ", field('month')]]
 
-    def __init__(self):
-        super(Minimalism, self).__init__(abbreviate_names=True)
+    def __init__(self, abbreviate_names=False):
+        super(Minimalism, self).__init__(abbreviate_names=abbreviate_names)
 
     def format_names(self, role, as_sentence=True):
         formatted_names = format_names(role)
