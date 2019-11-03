@@ -47,9 +47,6 @@ class Minimalism(BaseStyle):
             return formatted_names
 
     def format_title(self, e, which_field, as_sentence=True):
-        # formatted_title = field(
-        #     which_field, apply_func=lambda text: text
-        # )
         formatted_title = href[
             field('url', raw=True),
             field(which_field),
@@ -62,9 +59,9 @@ class Minimalism(BaseStyle):
     def format_btitle(self, e, which_field, as_sentence=True):
         formatted_title = tag('em')[field(which_field)]
         if as_sentence:
-            return sentence["In", formatted_title]
+            return sentence["In", formatted_title, self.date]
         else:
-            return formatted_title
+            return words(sep=', ')[formatted_title, self.date]
 
     def format_authors(self, e):
         return self.format_names('author')
@@ -87,7 +84,6 @@ class Minimalism(BaseStyle):
             sentence(sep=' ')[
                 "In",
                 self.format_btitle(e, 'booktitle', as_sentence=False),
-                self.date,
             ],
             sentence[optional_field('note')],
         ]
@@ -106,7 +102,7 @@ def parse_bib(filename, exclude_fields=None) -> List[BiblioEntry]:
     :param exclude_fields:
     :return: a list of BiblioEntry
     """
-    STYLE = Minimalism()
+    STYLE = Minimalism(abbreviate_names=True)
     HTML = find_plugin('pybtex.backends', 'html')()
 
     bibliography = parse_file(filename)
