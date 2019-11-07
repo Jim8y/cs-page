@@ -17,9 +17,9 @@
 
 \usepackage[paper=letterpaper,
 %includefoot, % Uncomment to put page number above margin
-marginparwidth=1.1in,     % Length of section titles
+marginparwidth=.9in,     % Length of section titles
 marginparsep=.05in,       % Space between titles and text
-margin=1in,               % 1 inch margins
+margin=.8in,               % 1 inch margins
 includemp]{geometry}
 
 %% More layout: Get rid of indenting throughout entire document
@@ -86,7 +86,7 @@ includemp]{geometry}
 \newcommand{\makeheading}[2][]%
 {\hspace*{-\marginparsep minus \marginparwidth}%
 \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
-  {\huge {#2} \hfill #1}\\[-0.5\baselineskip]%
+  {\Huge {#2} \hfill #1}\\[-0.5\baselineskip]%
 \rule{\columnwidth}{1pt}%
 \end{minipage}}
 
@@ -162,19 +162,20 @@ includemp]{geometry}
 \begin{document}
 \makeheading{Fan Zhang}
 
-\newlength{\rcollength}\setlength{\rcollength}{1.65in}%
+\newlength{\rcollength}\setlength{\rcollength}{2.3in}%
 
-\Section{Contact Information}
+\vspace{-1.5cm}
 \begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
-2 West Loop Road & \href{https://fanzhang.me}{\tt https://fanzhang.me}\\
-New York, NY 10044  & \email{fanz@cs.cornell.edu}
+ & \href{https://fanzhang.me}{\tt https://fanzhang.me}\\
+ & \email{fanz@cs.cornell.edu} \\
+ & 2 West Loop, New York, NY 10044
 \end{tabular}
 
 \Section{Education}
 \Subsection{Ph.D. Candidate in Computer Science}{Aug, 2014--present}
 \begin{innerlist}
 \item[] Advisor: Prof. Ari Juels
-\item[] Dept.\ of Computer Science \\ Cornell University
+\item[] Dept.\ of Computer Science, Cornell University
 \end{innerlist}
 
 \smallskip
@@ -183,15 +184,15 @@ New York, NY 10044  & \email{fanz@cs.cornell.edu}
 \item[] Tsinghua University, Beijing, China
 \end{innerlist}
 
-\Section{Research Areas}
-Applied Cryptography, Trusted Hardware, Blockchain
+\Section{Research}
+Security and Privacy, Blockchains, Applied Cryptography, Trusted Hardware
 
 \Section{Industry Adoption}
 My research has led to direct industry adoption.
 Town Crier~\cite{DBLP:conf/ccs/ZhangCCJS16} was licensed from Cornell by \href{https://chain.link}{Chainlink} and Ekiden~\cite{DBLP:conf/eurosp/ChengZKHHJJ0S19} is used in \href{https://oasislabs.com}{Oasis Labs}' products. CHURP~\cite{DBLP:journals/iacr/Maram0WLZJS19} is on Oasis Labs product roadmap. DECO~\cite{1909.00938} is under licensing negotiation.
 
 
-\Section{Honors/Awards}
+\Section{Awards}
 \vspace{-5mm}
 \begin{innerlist}
 \item {IBM PhD Fellowship Award}\hfill {2018-2020}
@@ -202,10 +203,37 @@ Town Crier~\cite{DBLP:conf/ccs/ZhangCCJS16} was licensed from Cornell by \href{h
 
 
 \Section{Selected Publications}
-\vspace{-6mm}
+\vspace{-7mm}
 
 \nocite{*}
 \printbibliography[heading=none]
+
+
+\Section{Working Experience}
+\Subsection{Researcher}{May, 2017 -- Aug, 2017} \\
+Oasis Labs \hfill Berkeley, CA
+
+\Subsection{Researcher} {Jul, 2017 -- Aug, 2017} \\
+SPR (Security \& Privacy Research), Intel Labs \hfill Hillsboro, OR
+
+\Subsection{System developer intern} {Jun, 2013 -- May, 2014} \\
+Intel Opensource Technology Center (01.org) \hfill Beijing, China
+
+\Section{Teaching Experience}
+\vspace{-5mm}
+\begin{innerlist}
+\item TA for CS5435: Security and Privacy in the Wild \hfill 2015, Fall
+\item TA for CS5300: the Architecture of Large-scale Information Systems \hfill 2015, Spring
+\item TA for CS4410: Operating Systems \hfill 2014 Fall
+\end{innerlist}
+
+\Section{Professional Activity}
+\vspace{-5mm}
+\begin{innerlist}
+\item {\bf Program Committee}: BITCOIN'18, collocated with Financial Crypto 2018.
+\item {\bf Reviewer}: ACM Computing Surveys (2018), Nature Sustainability (2018)
+\item {\bf Subreviewer}: USENIX Security (2016), TCC (2019), FC (2019)
+\end{innerlist}
 
 \Section{Invited Talks}
 \SubsectionOne{Connecting Blockchains to the Real World}
@@ -246,13 +274,7 @@ CCS'16, Vienna, Austria. \hfill{Oct, 2016}
 IC3 Retreat, New York City. \hfill{May, 2016}
 \end{innerlist}
 
-\Section{Professional Activity}
-\vspace{-5mm}
-\begin{innerlist}
-\item {\bf Program Committee}: BITCOIN'18, collocated with Financial Crypto 2018.
-\item {\bf Reviewer}: ACM Computing Surveys (2018), Nature Sustainability (2018)
-\item {\bf Subreviewer}: USENIX Security (2016), TCC (2019), FC (2019)
-\end{innerlist}
+
 
 
 \Section{Software Artifacts}
@@ -270,24 +292,6 @@ CHURP: Dynamic-Committee Proactive Secret Sharing \\
 \item
 mbedtls-SGX: a SGX-friendly TLS stack (ported from mbedtls)\\
 \url{https://github.com/bl4ck5un/mbedtls-SGX}
-\end{innerlist}
-
-\Section{Working Experience}
-\Subsection{Researcher}{May, 2017 -- Aug, 2017} \\
-Oasis Labs \hfill Berkeley, CA
-
-\Subsection{Researcher} {Jul, 2017 -- Aug, 2017} \\
-SPR (Security \& Privacy Research), Intel Labs \hfill Hillsboro, OR
-
-\Subsection{System developer intern} {Jun, 2013 -- May, 2014} \\
-Intel Opensource Technology Center (01.org) \hfill Beijing, China
-
-\Section{Teaching Experience}
-\vspace{-5mm}
-\begin{innerlist}
-\item TA for CS5435: Security and Privacy in the Wild \hfill 2015, Fall
-\item TA for CS5300: the Architecture of Large-scale Information Systems \hfill 2015, Spring
-\item TA for CS4410: Operating Systems \hfill 2014 Fall
 \end{innerlist}
 
 
