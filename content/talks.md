@@ -1,3 +1,6 @@
-- Jan 31, 2019. Northeastern University, [Cybersecurity Speaker Series](https://www.khoury.northeastern.edu/event/cybersecurity-speaker-series-blockchains-and-trusted-execution-environments-towards-a-new-security-paradigm/).
-- Nov 28, 2018. MIT, [CSAIL](https://www.csail.mit.edu/event/blockchains-and-trusted-execution-environments-towards-new-security-paradigm). Hosted by [Alin Tomescu](http://people.csail.mit.edu/alinush/).
-- Oct 19, 2018. New York University, [CS Colloquium](https://cs.nyu.edu/dynamic/news/colloquium/1095/). Hosted by [Joe Bonneau](http://jbonneau.com/) and [Dennis Shasha](https://cs.nyu.edu/cs/faculty/shasha/index.html).
+- Oct, 2019, ETH Zurich, on Connecting Blockchains with the Real World.
+- Oct, 2019. ACM [AFT](https://aft.acm.org/) on [Paralysis Proofs](https://dl.acm.org/authorize?N695294).
+- Sep, 2019. IBM Watson Research Center, IBM PhD Fellow Talk, on [DECO: Liberating Web Data Using Decentralized Oracles for TLS](https://arxiv.org/abs/1909.00938).
+- Jan, 2019. Northeastern University, [Cybersecurity Speaker Series](https://www.khoury.northeastern.edu/event/cybersecurity-speaker-series-blockchains-and-trusted-execution-environments-towards-a-new-security-paradigm/), on Ekiden and CHURP.
+- Nov, 2018. MIT, [CSAIL](https://www.csail.mit.edu/event/blockchains-and-trusted-execution-environments-towards-new-security-paradigm), on Trusted Hardware and Blockchain Hybridization.
+- Oct, 2018. New York University, [CS Colloquium](https://cs.nyu.edu/dynamic/news/colloquium/1095/), on Trusted Hardware and Blockchain Hybridization.
