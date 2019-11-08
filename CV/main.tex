@@ -4,13 +4,42 @@
 \usepackage{pdfpages}
 
 \usepackage[T1]{fontenc}
-%\usepackage[sc]{mathpazo}
 
-\usepackage{libertine}
-\usepackage[override]{cmtt}
+\usepackage[tt=false]{libertine}
 
-\usepackage[style=ieee,block=ragged,doi=false,url=false,sorting=ydnt]{biblatex}
+\usepackage[backend=biber,style=ieee,block=ragged,doi=false,url=false,sorting=ydnt]{biblatex}
+\usepackage{xpatch}
 \addbibresource{Zhang_0022:Fan.bib}
+
+% to make name bold
+% taken from https://tex.stackexchange.com/questions/274436/highlight-an-author-in-bibliography-using-biblatex-allowing-bibliography-style-t/274571#274571
+
+\newcommand*{\doboldhashes}[1]{%
+  \iffieldequalstr{hash}{#1}
+    {\bfseries\listbreak}
+    {}}%
+
+\newbibmacro*{name:bold}{%
+  \forlistloop{\doboldhashes}{\boldnames}%
+}
+
+\newcommand*{\boldnames}{}
+
+\xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}}{}{}
+\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}}{}{}
+\xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:family}{\endgroup}{}{}
+\xapptobibmacro{name:given-family}{\endgroup}{}{}
+\xapptobibmacro{name:family-given}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+\renewcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}
+  {{ae021641a8f85fd2607152ab99ed115b},{a66874965c0ba479de19bb40f33388d1}}
+  
+% end of macros for making names bold
 
 % Layout: Puts the section titles on left side of page
 \reversemarginpar
@@ -86,7 +115,7 @@ includemp]{geometry}
 \newcommand{\makeheading}[2][]%
 {\hspace*{-\marginparsep minus \marginparwidth}%
 \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
-  {\Huge {#2} \hfill #1}\\[-0.5\baselineskip]%
+  {\Huge {#2} \hfill #1}\\[-0.3\baselineskip]%
 \rule{\columnwidth}{1pt}%
 \end{minipage}}
 
@@ -165,8 +194,8 @@ includemp]{geometry}
 \newlength{\rcollength}\setlength{\rcollength}{2.3in}%
 
 \vspace{-1.5cm}
-\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
- & \href{https://fanzhang.me}{\tt https://fanzhang.me}\\
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}rp{\rcollength}}
+ & \url{https://fanzhang.me}\\
  & \email{fanz@cs.cornell.edu} \\
  & 2 West Loop, New York, NY 10044
 \end{tabular}
