@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage{calc}
+\usepackage{pdfpages}
+
+\usepackage[T1]{fontenc}
+%\usepackage[tt=false]{libertine}
+
+\usepackage[style=ieee,
+doi=false,
+url=false,
+giveninits=false,
+sorting=ydndt]{biblatex}
+
+
+% special sort style
+\DeclareSortingTemplate{ydndt}{
+  \sort[direction=descending]{\field{year}}
+  \sort[direction=descending]{\field{name}}
+  \sort{\field{title}}
+}
+
+\usepackage{xpatch}
+\addbibresource{Zhang_0022-full.bib}
+
+% to make name bold
+% taken from https://tex.stackexchange.com/questions/274436/highlight-an-author-in-bibliography-using-biblatex-allowing-bibliography-style-t/274571#274571
+
+\newcommand*{\doboldhashes}[1]{%
+  \iffieldequalstr{hash}{#1}
+    {\bfseries\listbreak}
+    {}}%
+
+\newbibmacro*{name:bold}{%
+  \forlistloop{\doboldhashes}{\boldnames}%
+}
+
+\newcommand*{\boldnames}{}
+
+\xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}}{}{}
+\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}}{}{}
+\xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:family}{\endgroup}{}{}
+\xapptobibmacro{name:given-family}{\endgroup}{}{}
+\xapptobibmacro{name:family-given}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+\renewcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}
+  {ae021641a8f85fd2607152ab99ed115b,a66874965c0ba479de19bb40f33388d1}
+  
+% end of macros for making names bold
+
+\usepackage[paper=letterpaper]{geometry}
+
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\hypersetup{colorlinks,breaklinks,allcolors=blue}
+
+
+\newcommand{\ignore}[1]{}
+
+
+\begin{document}
+
+\title{\bf List of Publications}
+\author{Fan Zhang, Cornell University}
+\date{}
+
+\maketitle
+
+\nocite{*}
+\printbibliography[type=inproceedings,heading=none]
+
+\end{document}
