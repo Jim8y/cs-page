@@ -18,6 +18,6 @@
   "permission": false,
   "autoInstall": false,
   "rtl": false,
-  "components": ["reset", "site", "container", "divider", "header", "icon", "image", "label", "list", "segment", "grid", "card", "item", "menu", "sticky", "dropdown", "transition"],
+  "components": ["reset", "site", "container", "divider", "header", "icon", "image", "label", "list", "segment", "grid", "card", "item", "menu", "sticky", "dropdown", "transition", "message"],
   "version": "2.7.8"
 }

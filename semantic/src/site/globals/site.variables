@@ -11,4 +11,4 @@
 // @emSize : 15px;
 // @fontSize : 15px;
 
-@googleFontRequest : '@{fontName}:400,700|@{headerFont}&subset=@{googleSubset}';
+@googleFontRequest : '@{fontName}:400,400i,700|@{headerFont}&subset=@{googleSubset}';
