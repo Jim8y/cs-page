@@ -1,3 +1,5 @@
+- Nov, 2018, CISPA – Helmholtz Center for Information Security, Germany, on Connecting Blockchains with the Real World.
+- Nov, 2019, ACM CCS'19, London, UK, on CHURP: Proactive Secret Sharing with Dynamic Committee.
 - Oct, 2019, ETH Zurich, on Connecting Blockchains with the Real World.
 - Oct, 2019. ACM [AFT](https://aft.acm.org/) on [Paralysis Proofs](https://dl.acm.org/authorize?N695294).
 - Sep, 2019. IBM Watson Research Center, IBM PhD Fellow Talk, on [DECO: Liberating Web Data Using Decentralized Oracles for TLS](https://arxiv.org/abs/1909.00938).
